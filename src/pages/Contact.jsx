@@ -3,131 +3,118 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="bg-white min-h-screen font-sans">
+    <div className="bg-white min-h-screen selection:bg-sunset/30">
       
-      {/* Hero Section - Using the Deep Navy from the logo */}
-      <div className="bg-navy text-white py-24 px-6 relative overflow-hidden">
-        {/* Subtle decorative element to mimic Table Mountain silhouette or waves */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-red opacity-80"></div>
+      {/* 1. Cinematic Hero Section */}
+      <section className="relative h-[60vh] flex items-center bg-navy overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-atlantic/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-logo-teal/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"></div>
         
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl font-extrabold tracking-tight mb-4 uppercase">Get In Touch</h1>
-          <p className="text-xl text-sky font-light max-w-2xl mx-auto">
-            Connecting the Church of the Nazarene across the Western Cape. Reach out to our district leadership and administration.
-          </p>
-        </div>
-      </div>
+        {/* <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <div className="max-w-3xl">
+            <h1 className="text-6xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter mb-8">
+              Let’s <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sand via-sky to-white italic">
+                Connect.
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-sky/70 font-light leading-relaxed max-w-xl">
+              Whether you are looking for a church home or inquiring about district leadership, 
+              we are here to listen and serve.
+            </p>
+          </div>
+        </div> */}
+      </section>
 
-      {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-5 gap-16">
+      {/* 2. Overlapping Contact Content */}
+      <section className="relative z-20 -mt-24 pb-32 px-6">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
           
-          {/* Left Column: Contact Details (2/5 width) */}
-          <div className="lg:col-span-2 space-y-12">
-            <div>
-              <h2 className="text-sm font-bold text-district-red tracking-widest uppercase mb-4">Contact Information</h2>
-              <h3 className="text-3xl font-bold text-district-navy mb-6">District Office</h3>
-              
-              <div className="space-y-8">
-                <div className="flex items-start space-x-4">
-                  <div className="text-district-ocean text-2xl mt-1">📍</div>
-                  <div>
-                    <h4 className="font-bold text-district-navy">Headquarters</h4>
-                    <p className="text-slate-600 leading-relaxed">
-                      123 Church Street,<br /> 
-                      Cape Town CBD, 8001<br />
-                      South Africa
-                    </p>
+          {/* Left Column: Contextual Info Cards (5/12) */}
+          <div className="lg:col-span-5 space-y-8">
+            
+            {/* Office Details Card */}
+            <div className="bg-white p-7 rounded-[2rem] shadow-xl shadow-navy/5 border border-slate-50 flex flex-col justify-between group">
+               <div>
+                  <h3 className="text-[10px] font-black text-red uppercase tracking-[0.3em] mb-5">Headquarters</h3>
+                  <div className="space-y-5">
+                    <div className="flex gap-4 items-start">
+                       <span className="text-xl mt-0.5">📍</span>
+                       <p className="text-sm text-navy font-light leading-snug">
+                         123 Church Street, <br />
+                         Cape Town CBD, 8001
+                       </p>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                       <span className="text-xl">📞</span>
+                       <p className="text-sm text-navy font-light">+27 (21) 000 0000</p>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                       <span className="text-xl">✉️</span>
+                       <p className="text-sm text-navy font-light underline decoration-sunset underline-offset-4">
+                         info@wcnazarene.org
+                       </p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="text-district-ocean text-2xl mt-1">✉️</div>
-                  <div>
-                    <h4 className="font-bold text-district-navy">Email Us</h4>
-                    <p className="text-slate-600">General: info@wcnazarene.org</p>
-                    <p className="text-slate-600">Office: admin@wcnazarene.org</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="text-district-ocean text-2xl mt-1">📞</div>
-                  <div>
-                    <h4 className="font-bold text-district-navy">Call Us</h4>
-                    <p className="text-slate-600">Main Office: +27 (21) 000 0000</p>
-                    <p className="text-slate-600 font-light text-sm italic">Mon - Fri, 08:30 - 16:30</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links or Extra Info */}
-            <div className="p-8 bg-slate-50 rounded-2xl border-l-4 border-district-teal">
-              <h4 className="font-bold text-district-navy mb-2">Pastoral Credentials</h4>
-              <p className="text-sm text-slate-600">
-                For inquiries regarding district licensing or credentialing, please specify "Board of Orders" in your message.
-              </p>
+               </div>
+               
+               <div className="mt-6 pt-5 border-t border-sand">
+                  <p className="text-[10px] font-black text-fynbos/40 uppercase tracking-widest">Office Hours</p>
+                  <p className="text-navy font-bold text-xs mt-1">Mon — Fri: 08:30 – 16:30</p>
+               </div>
             </div>
           </div>
 
-          {/* Right Column: Premium Form (3/5 width) */}
-          <div className="lg:col-span-3">
-            <div className="bg-white p-2 sm:p-10 rounded-3xl shadow-2xl shadow-slate-200 border border-slate-100">
-              <h2 className="text-2xl font-bold text-district-navy mb-8">Direct Message</h2>
+          {/* Right Column: High-End Minimalist Form (7/12) */}
+          <div className="lg:col-span-7">
+            <div className="bg-[#FCFAF5] p-10 md:p-16 rounded-[4rem] border border-sand/50 shadow-inner">
+              <h2 className="text-4xl font-black text-navy mb-12 tracking-tighter">Send a Message</h2>
               
-              <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex flex-col">
-                  <label className="text-sm font-semibold text-slate-700 mb-2 ml-1">Full Name</label>
-                  <input
-                    type="text"
-                    className="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-district-ocean focus:bg-white transition outline-none"
-                    placeholder="e.g. Samuel Khumalo"
-                  />
+              <form className="space-y-10">
+                <div className="grid md:grid-cols-2 gap-10">
+                  <div className="relative">
+                    <input type="text" id="name" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-sunset outline-none transition-colors placeholder-transparent" placeholder="Name" />
+                    <label htmlFor="name" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-sunset transition-all">Full Name</label>
+                  </div>
+                  <div className="relative">
+                    <input type="email" id="email" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-sunset outline-none transition-colors placeholder-transparent" placeholder="Email" />
+                    <label htmlFor="email" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-sunset transition-all">Email Address</label>
+                  </div>
                 </div>
 
-                <div className="flex flex-col">
-                  <label className="text-sm font-semibold text-slate-700 mb-2 ml-1">Email Address</label>
-                  <input
-                    type="email"
-                    className="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-district-ocean focus:bg-white transition outline-none"
-                    placeholder="samuel@example.com"
-                  />
+                <div className="relative">
+                   <label className="block text-[10px] font-black uppercase tracking-widest text-sunset mb-2">Subject</label>
+                   <div className="relative">
+                     <select className="w-full appearance-none bg-white border border-sand rounded-xl px-4 py-3 text-sm text-navy font-medium focus:outline-none focus:border-sunset focus:ring-1 focus:ring-sunset/30 transition-all cursor-pointer">
+                        <option value="" disabled>Select a subject...</option>
+                        <option>General Inquiry</option>
+                        <option>Find a Church</option>
+                        <option>Departmental Inquiry</option>
+                        <option>Other</option>
+                     </select>
+                     <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-fynbos/50 text-xs">▼</span>
+                   </div>
                 </div>
 
-                <div className="flex flex-col sm:col-span-2">
-                  <label className="text-sm font-semibold text-slate-700 mb-2 ml-1">Subject</label>
-                  <select className="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-district-ocean focus:bg-white transition outline-none appearance-none">
-                    <option>General Inquiry</option>
-                    <option>Find a Church</option>
-                    <option>District Events</option>
-                    <option>Departmental (NYI / NMI / NDI)</option>
-                    <option>Other</option>
-                  </select>
+                <div className="relative">
+                  <textarea rows="4" id="msg" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-sunset outline-none transition-colors placeholder-transparent resize-none" placeholder="Message"></textarea>
+                  <label htmlFor="msg" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-sunset transition-all">How can we help?</label>
                 </div>
 
-                <div className="flex flex-col sm:col-span-2">
-                  <label className="text-sm font-semibold text-slate-700 mb-2 ml-1">Your Message</label>
-                  <textarea
-                    rows="6"
-                    className="bg-slate-50 border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-district-ocean focus:bg-white transition outline-none resize-none"
-                    placeholder="How can we assist you?"
-                  ></textarea>
-                </div>
-
-                <div className="sm:col-span-2">
-                  <button
-                    type="submit"
-                    className="w-full bg-district-navy text-white font-bold py-5 rounded-xl hover:bg-district-ocean transition-all duration-300 shadow-lg shadow-slate-300 transform hover:-translate-y-1"
-                  >
-                    Send Secure Message
-                  </button>
-                </div>
+                <button type="submit" className="group relative w-full overflow-hidden bg-navy py-6 rounded-2xl">
+                   <div className="absolute inset-0 bg-sunset translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                   <span className="relative z-10 text-sand font-black uppercase tracking-[0.3em] text-xs group-hover:text-navy transition-colors">
+                      Send Message
+                   </span>
+                </button>
               </form>
             </div>
           </div>
 
         </div>
-      </div>
+      </section>
+
     </div>
   );
 }
