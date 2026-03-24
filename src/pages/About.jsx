@@ -147,12 +147,12 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex flex-col divide-y divide-sand/50 border-t border-sand/50">
+          <div className="grid md:grid-cols-2 gap-4">
             {beliefs.map((b, i) => (
-              <div key={i} className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 px-6 -mx-6">
-                <span className="text-[11px] font-black text-sand tracking-[0.3em] shrink-0 w-8">{String(i + 1).padStart(2, '0')}</span>
-                <p className="text-navy/80 text-sm md:text-base font-light leading-relaxed">
-                  <span className="font-black text-navy">We believe </span>{b}
+              <div key={i} className="flex gap-6 bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
+                <span className="text-[11px] font-black text-sunset/60 tracking-[0.2em] shrink-0 pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                  <span className="font-bold text-navy">We believe </span>{b}
                 </p>
               </div>
             ))}
