@@ -25,7 +25,7 @@ export default function About() {
             dedicated to making Christlike disciples in every community.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-5">
+          {/* <div className="mt-10 flex flex-wrap justify-center gap-5">
             <Link
               to="/churches"
               className="bg-sunset text-white px-10 py-4 rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-sunset/20 hover:-translate-y-1"
@@ -39,7 +39,7 @@ export default function About() {
               Get in Touch
               <span className="group-hover:translate-x-2 transition-transform">→</span>
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 

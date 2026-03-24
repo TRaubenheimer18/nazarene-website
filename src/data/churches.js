@@ -5,7 +5,7 @@ export const churches = [
     area: "Atlantis, Cape Town", 
     pastor: "Nigel Kolkoto",
     time: "Sun 10:00 AM",
-    // image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=60&w=800" 
+    image: require('../assets/Atlantis COTN.jpeg') 
   },
   { 
     id: "belhar-nazarene", 
