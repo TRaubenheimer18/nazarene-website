@@ -49,7 +49,7 @@ export default function Navbar() {
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Locations", path: "/churches" },
+            { name: "Churches", path: "/churches" },
             { name: "Ministries", path: "/ministries" },
             { name: "Events", path: "/events" },
             { name: "College", path: "/college" },
