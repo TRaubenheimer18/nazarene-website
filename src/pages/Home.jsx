@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CapeTownImg from '../assets/cape-town.jpg'; 
+import CapeTownImg from '../assets/cape-town.jpg';
+import Image2 from '../assets/image2.jpg';
+import Image3 from '../assets/image3.jpg';
+import Image4 from '../assets/image4.jpg'; 
 
 export default function Home() {
   return (
@@ -71,33 +74,42 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 3. The "Essentials" Section with Glass Cards */}
+      {/* 3. Core Pillars */}
       <section className="py-32 px-6 bg-sand/20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <h2 className="text-red font-bold tracking-widest uppercase text-sm mb-4">Core Pillars</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-navy max-w-xl">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-[2px] w-10 bg-sunset"></div>
+              <span className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Core Pillars</span>
+            </div>
+            <h3 className="text-4xl md:text-5xl font-black text-navy tracking-tighter max-w-xl">
               Grounded in Holiness, <br />
-              Driven by Mission.
+              <span className="text-fynbos">Driven by Mission.</span>
             </h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((p, i) => (
-              <div key={i} className="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-4 opacity-5 text-6xl">{p.icon}</div>
-                <div className="w-14 h-14 bg-sky/20 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-fynbos group-hover:text-white transition-colors">
-                  {p.icon}
+              <div key={i} className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
                 </div>
-                <h4 className="text-2xl font-bold text-navy mb-4">{p.title}</h4>
-                <p className="text-slate-500 leading-relaxed">{p.desc}</p>
+                <div className="p-10">
+                  <h4 className="text-2xl font-black text-navy mb-4">{p.title}</h4>
+                  <p className="text-slate-500 leading-relaxed">{p.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. Impact Footer Card */}
+      {/* 4. Impact Footer Card
       <section className="pb-24 px-6">
         <div className="max-w-7xl mx-auto relative rounded-[3rem] overflow-hidden bg-navy p-12 md:p-24 text-center">
           <div className="absolute inset-0 bg-gradient-to-br from-atlantic/50 to-transparent"></div>
@@ -113,13 +125,13 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
 
 const pillars = [
-  { icon: '📖', title: 'Holiness', desc: 'Seeking to be a people set apart by God’s grace and love.' },
-  { icon: '🤝', title: 'Fellowship', desc: 'Supporting our pastors and families as one district body.' },
-  { icon: '🌍', title: 'Mission', desc: 'Actively serving the diverse communities of the Western Cape.' }
+  { image: Image2, title: 'Holiness', desc: 'Seeking to be a people set apart by God’s grace and love.' },
+  { image: Image4, title: 'Fellowship', desc: 'Supporting our pastors and families as one district body.' },
+  { image: Image3, title: 'Mission', desc: 'Actively serving the diverse communities of the Western Cape.' }
 ];

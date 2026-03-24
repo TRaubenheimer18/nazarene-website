@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CapeTownImg from '../assets/cape-town.jpg';
+// import { Link } from 'react-router-dom';
+import Img1 from '../assets/image1.jpg';
 
 export default function About() {
   return (
@@ -78,9 +78,9 @@ export default function About() {
             </div>
 
             <div className="relative rounded-[2.5rem] overflow-hidden h-[480px] shadow-2xl shadow-navy/20">
-              <img src={CapeTownImg} alt="Western Cape" className="w-full h-full object-cover" />
+              <img src={Img1} alt="Western Cape" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
-              <div className="absolute bottom-8 left-8 right-8 grid grid-cols-2 gap-4">
+              {/* <div className="absolute bottom-8 left-8 right-8 grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20">
                   <span className="text-4xl font-black text-white">40</span>
                   <p className="text-[10px] font-black text-sand/70 uppercase tracking-widest mt-1">Congregations</p>
@@ -89,7 +89,7 @@ export default function About() {
                   <span className="text-4xl font-black text-white">5k+</span>
                   <p className="text-[10px] font-black text-sand/70 uppercase tracking-widest mt-1">Members</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
           </div>
@@ -176,7 +176,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             {coreValues.map((v, i) => (
               <div key={i} className="bg-[#FCFAF5] p-10 rounded-[2.5rem] border border-slate-100">
-                <div className="w-12 h-12 bg-sand/50 rounded-2xl flex items-center justify-center text-2xl mb-6">{v.icon}</div>
+                {/* <div className="w-12 h-12 bg-sand/50 rounded-2xl flex items-center justify-center text-2xl mb-6">{v.icon}</div> */}
                 <p className="text-[10px] font-black text-sunset uppercase tracking-[0.4em] mb-2">Core Value</p>
                 <h4 className="text-xl font-black text-navy mb-4">{v.title}</h4>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">{v.desc}</p>
@@ -186,29 +186,88 @@ export default function About() {
         </div>
       </section>
 
-      {/* 7. Our Story */}
+      {/* 7. Our History */}
       <section className="py-28 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-16">
+
+          <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-sunset"></div>
             <span className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Our History</span>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {milestones.map((m, i) => (
-              <div key={i} className="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-6 opacity-5 text-7xl font-black text-navy">{m.year}</div>
-                <p className="text-[10px] font-black text-sunset uppercase tracking-[0.4em] mb-3">{m.year}</p>
-                <h4 className="text-xl font-black text-navy mb-4">{m.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed font-light">{m.desc}</p>
-              </div>
-            ))}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <h3 className="text-4xl md:text-5xl font-black text-navy tracking-tighter">The Nazarene Story.</h3>
+            <p className="text-sm text-slate-400 font-light max-w-xs leading-relaxed">
+              Tracing our roots from 1908 to a global movement of holiness.
+            </p>
           </div>
+
+          {/* Intro */}
+          <div className="bg-white rounded-[2rem] p-10 border border-slate-100 shadow-sm mb-12">
+            <p className="text-slate-500 text-base font-light leading-relaxed mb-6">
+              The Church of the Nazarene traces its anniversary date to 1908. Its organization was a marriage that, like every marriage, linked existing families and created a new one. As an expression of the holiness movement and its emphasis on the sanctified life, our founders came together to form one people. Utilizing evangelism, compassionate ministries, and education, their church went forth to become a people of many cultures and tongues.
+            </p>
+            {/* <div className="flex flex-wrap gap-4">
+              {['Unity in Holiness', 'A Mission to the World'].map((theme, i) => (
+                <span key={i} className="inline-flex items-center gap-2 bg-sand/50 px-5 py-2 rounded-full border border-sand">
+                  <div className="w-1.5 h-1.5 rounded-full bg-sunset"></div>
+                  <span className="text-[10px] font-black text-navy uppercase tracking-[0.3em]">{theme}</span>
+                </span>
+              ))}
+            </div> */}
+          </div>
+
+          {/* Two themes */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+
+            <div className="bg-white rounded-[2rem] p-10 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-4 mb-6">
+                {/* <div className="w-10 h-10 rounded-xl bg-sand/50 flex items-center justify-center text-lg shrink-0">✝️</div> */}
+                <p className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Unity in Holiness</p>
+              </div>
+              <p className="text-slate-500 text-sm font-light leading-relaxed mb-4">
+                The spiritual vision of early Nazarenes was derived from the doctrinal core of John Wesley's preaching — justification by grace through faith, entire sanctification as an inheritance available to every Christian, and the witness of the Spirit to God's work in human lives.
+              </p>
+              <p className="text-slate-500 text-sm font-light leading-relaxed mb-4">
+                In October 1907, the Association of Pentecostal Churches of America and the Church of the Nazarene merged in Chicago at the First General Assembly. In October 1908, the Second General Assembly was held at Pilot Point, Texas, completing the "year of uniting" with the merger of the southern and northern denominations.
+              </p>
+              <p className="text-slate-500 text-sm font-light leading-relaxed">
+                With the Pentecostal Church of Scotland and Pentecostal Mission unions in 1915, the Church of the Nazarene embraced seven previous denominations. The Nazarenes emerged as the denomination that eventually drew together a majority of the holiness movement's independent strands.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[2rem] p-10 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-4 mb-6">
+                {/* <div className="w-10 h-10 rounded-xl bg-sand/50 flex items-center justify-center text-lg shrink-0">🌍</div> */}
+                <p className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">A Mission to the World</p>
+              </div>
+              <p className="text-slate-500 text-sm font-light leading-relaxed mb-4">
+                In 1908 there were churches in Canada and organized work in India, Cape Verde, and Japan, soon followed by work in Africa, Mexico, and China. As General Superintendent H. F. Reynolds advocated "a mission to the world," support for world evangelization became a distinguishing characteristic of Nazarene life.
+              </p>
+              <p className="text-slate-500 text-sm font-light leading-relaxed mb-4">
+                As the church grew culturally and linguistically diverse, it committed itself in 1980 to internationalization — a deliberate policy of being one church of congregations and districts worldwide. Today 65 percent of Nazarenes and over 80 percent of the church's 439 districts are outside the United States.
+              </p>
+              <p className="text-slate-500 text-sm font-light leading-relaxed">
+                Nazarenes support 14 liberal arts institutions across Africa, Brazil, Canada, the Caribbean, Korea, and the United States, as well as five graduate seminaries, 31 undergraduate Bible colleges, and additional institutions worldwide.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Phineas Bresee */}
+          <div className="relative bg-navy rounded-[2rem] p-10 overflow-hidden">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-sunset rounded-l-[2rem]"></div>
+            <p className="text-[10px] font-black text-sunset uppercase tracking-[0.4em] mb-3">Founding Father</p>
+            <h4 className="text-2xl font-black text-black mb-4">Phineas F. Bresee</h4>
+            <p className="text-slate-500 text-sm font-light leading-relaxed">
+              In 1907, Bresee led the Church of the Nazarene into a union with the Association of Pentecostal Churches of America. Meeting in Chicago for their First General Assembly, the two groups formalized their merger, adopting the name Pentecostal Church of the Nazarene and electing two general superintendents. Bresee was the first general superintendent elected, soon joined by H. F. Reynolds of Brooklyn as the second.
+            </p>
+          </div>
+
         </div>
       </section>
 
       {/* 8. CTA Banner */}
-      <section className="pb-24 px-6">
+      {/* <section className="pb-24 px-6">
         <div className="max-w-7xl mx-auto relative rounded-[3rem] overflow-hidden bg-navy p-12 md:p-20 text-center">
           <div className="absolute inset-0 bg-gradient-to-br from-atlantic/50 to-transparent"></div>
           <div className="relative z-10">
@@ -227,7 +286,7 @@ export default function About() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
@@ -253,36 +312,19 @@ const beliefs = [
 
 const coreValues = [
   {
-    icon: '✝️',
+    // icon: '✝️',
     title: 'A Christian People',
     desc: 'As members of the Church Universal, we join with all true believers in proclaiming the Lordship of Jesus Christ and affirming the historic Trinitarian creeds. We value our Wesleyan-Holiness heritage as a way of understanding the faith true to Scripture, reason, tradition, and experience.',
   },
   {
-    icon: '🌿',
+    // icon: '🌿',
     title: 'A Holiness People',
     desc: 'God, who is holy, calls us to a life of holiness. We believe the Holy Spirit seeks to do in us a second work of grace — cleansing us from all sin, renewing us in the image of God, and producing in us the character of Christ.',
   },
   {
-    icon: '🌍',
+    // icon: '🌍',
     title: 'A Missional People',
     desc: 'We are a sent people, responding to the call of Christ and empowered by the Holy Spirit to go into all the world, witnessing to the Lordship of Christ and participating with God in the building of the Church and the extension of His kingdom.',
   },
 ];
 
-const milestones = [
-  {
-    year: 'Origins',
-    title: 'Rooted in the Cape',
-    desc: 'The Church of the Nazarene established its first congregations in the Western Cape, planting seeds of holiness in local communities.',
-  },
-  {
-    year: 'Growth',
-    title: 'A District is Born',
-    desc: 'As congregations multiplied across the region, the Western Cape District was formally organized to support and resource local churches.',
-  },
-  {
-    year: 'Today',
-    title: '40 Churches Strong',
-    desc: 'From Cape Town to the Winelands, our district now encompasses 40 congregations united in mission, worship, and service.',
-  },
-];
