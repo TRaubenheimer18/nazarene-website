@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Img1 from '../assets/image1.jpg';
 
@@ -186,6 +186,23 @@ export default function About() {
         </div>
       </section>
 
+      {/* 6. Articles of Faith */}
+      <section className="py-24 px-6 bg-[#FCFAF5]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-[2px] w-10 bg-sunset"></div>
+            <span className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Articles of Faith</span>
+          </div>
+          <h3 className="text-4xl md:text-5xl font-black text-navy tracking-tighter mb-8">The Constitution of Our Faith.</h3>
+          <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm mb-10">
+            <p className="text-slate-500 text-base font-light leading-relaxed">
+              In order that we may preserve our God-given heritage, the faith once delivered to the saints, especially the doctrine and experience of entire sanctification as a second work of grace, and also that we may cooperate effectually with other branches of the Church of Jesus Christ in advancing God's kingdom, we, the ministers and lay members of the Church of the Nazarene, in accordance with the principles of constitutional legislation established among us, do hereby ordain, adopt, and set forth as the fundamental law or Constitution of the Church of the Nazarene the Articles of Faith, the Covenant of Christian Character, and the Articles of Organization and Government here following, to wit:
+            </p>
+          </div>
+          <ArticlesOfFaith />
+        </div>
+      </section>
+
       {/* 7. Our History */}
       <section className="py-28 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
@@ -308,6 +325,107 @@ const beliefs = [
   'that believers are to be sanctified wholly, subsequent to regeneration, through faith in the Lord Jesus Christ.',
   'that the Holy Spirit bears witness to the new birth, and also to the entire sanctification of believers.',
   'that our Lord will return, the dead will be raised, and the final judgment will take place.',
+];
+
+function ArticlesOfFaith() {
+  const [active, setActive] = useState(null);
+  return (
+    <div className="divide-y divide-slate-100 border border-slate-100 rounded-[2rem] overflow-hidden bg-white shadow-sm">
+      {articles.map((a, i) => (
+        <div key={i}>
+          <button
+            onClick={() => setActive(active === i ? null : i)}
+            className="w-full flex items-center gap-5 px-8 py-5 text-left hover:bg-[#FCFAF5] transition-colors group"
+          >
+            <span className="text-[10px] font-black tracking-[0.2em] text-sunset/60 shrink-0 w-6">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span className="flex-1 text-sm font-bold text-navy group-hover:text-sunset transition-colors">
+              {a.title}
+            </span>
+            <span className={`text-slate-300 text-lg transition-transform duration-200 ${
+              active === i ? 'rotate-45' : ''
+            }`}>+</span>
+          </button>
+          {active === i && (
+            <div className="px-8 pb-7 pt-1">
+              <div className="pl-11">
+                <div className="h-[1px] w-8 bg-sunset mb-4"></div>
+                <p className="text-slate-500 text-sm font-light leading-relaxed">{a.body}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const articles = [
+  {
+    title: 'The Triune God',
+    body: 'We believe in one eternally existent, infinite God, Sovereign Creator and Sustainer of the universe; that He only is God, holy in nature, attributes, and purpose. The God who is holy love and light is Triune in essential being, revealed as Father, Son, and Holy Spirit.',
+  },
+  {
+    title: 'Jesus Christ',
+    body: 'We believe in Jesus Christ, the Second Person of the Triune God; that He was eternally one with the Father; that He became incarnate by the Holy Spirit and was born of the Virgin Mary, so that two whole and perfect natures, that is to say the Godhead and manhood, are thus united in one Person very God and very man.',
+  },
+  {
+    title: 'The Holy Spirit',
+    body: 'We believe in the Holy Spirit, the Third Person of the Triune God, that He is ever present and efficiently active in and with the Church of Christ, convincing the world of sin, regenerating those who repent and believe, sanctifying believers, and guiding into all truth as it is in Jesus.',
+  },
+  {
+    title: 'The Holy Scriptures',
+    body: 'We believe in the plenary inspiration of the Holy Scriptures, by which we understand the 66 books of the Old and New Testaments, given by divine inspiration, inerrantly revealing the will of God concerning us in all things necessary to our salvation, so that whatever is not contained therein is not to be enjoined as an article of faith.',
+  },
+  {
+    title: 'Atonement',
+    body: 'We believe that Jesus Christ, by His sufferings, by the shedding of His own blood, and by His meritorious death on the Cross, made a full atonement for all human sin, and that this Atonement is the only ground of salvation, and that it is sufficient for every individual of Adam\'s race.',
+  },
+  {
+    title: 'Prevenient Grace',
+    body: 'We believe that the human race\'s creation in Godlikeness included ability to choose between right and wrong, and that thus human beings were made morally responsible; that through the fall of Adam they became depraved so that they cannot now turn and prepare themselves by their own natural strength and works to faith and calling upon God.',
+  },
+  {
+    title: 'Repentance',
+    body: 'We believe that repentance, which is a sincere and thorough change of the mind in regard to sin, involving a sense of personal guilt and a voluntary turning away from sin, is demanded of all who have by act or purpose become sinners against God.',
+  },
+  {
+    title: 'Justification, Regeneration, and Adoption',
+    body: 'We believe that justification is the gracious and judicial act of God by which He grants full pardon of all guilt and complete release from the penalty of sins committed, and acceptance as righteous, to all who believe on Jesus Christ and receive Him as Lord and Savior. We believe that regeneration, or the new birth, is that gracious work of God whereby the moral nature of the repentant believer is spiritually quickened and given a distinctively spiritual life, capable of faith, love, and obedience. We believe that adoption is that gracious act of God by which the justified and regenerated believer is constituted a son of God.',
+  },
+  {
+    title: 'Entire Sanctification',
+    body: 'We believe that entire sanctification is that act of God, subsequent to regeneration, by which believers are made free from original sin, or depravity, and brought into a state of entire devotement to God, and the holy obedience of love made perfect. It is wrought by the baptism with or infilling of the Holy Spirit, and comprehends in one experience the cleansing of the heart from sin and the abiding, indwelling presence of the Holy Spirit, empowering the believer for life and service.',
+  },
+  {
+    title: 'The Church',
+    body: 'We believe in the Church, the community that confesses Jesus Christ as Lord, the covenant people of God made new in Christ, the Body of Christ called together by the Holy Spirit through the Word. God calls the Church to express its life in the unity and fellowship of the Spirit; in worship through the preaching of the Word, observance of the sacraments, and ministry in His name; by obedience to Christ and mutual accountability.',
+  },
+  {
+    title: 'Baptism',
+    body: 'We believe that Christian baptism, commanded by our Lord, is a sacrament signifying acceptance of the benefits of the atonement of Jesus Christ, to be administered to believers and declarative of their faith in Jesus Christ as their Savior, and full purpose of obedience in holiness and righteousness.',
+  },
+  {
+    title: 'The Lord\'s Supper',
+    body: 'We believe that the Memorial and Communion Supper instituted by our Lord and Savior Jesus Christ is essentially a New Testament sacrament, declarative of His sacrificial death, through the merits of which believers have life and salvation and promise of all spiritual blessings in Christ.',
+  },
+  {
+    title: 'Divine Healing',
+    body: 'We believe in the Bible doctrine of divine healing and urge our people to seek to offer the prayer of faith for the healing of the sick. We also believe God heals through the means of medical science.',
+  },
+  {
+    title: 'Second Coming of Christ',
+    body: 'We believe that the Lord Jesus Christ will come again; that we who are alive at His coming shall not precede them that are asleep in Christ Jesus; but that, if we are abiding in Him, we shall be caught up with the risen saints to meet the Lord in the air, so that we shall ever be with the Lord.',
+  },
+  {
+    title: 'Resurrection, Judgment, and Destiny',
+    body: 'We believe in the resurrection of the dead, that the bodies both of the just and of the unjust shall be raised to life and united with their spirits — they that have done good unto the resurrection of life, and they that have done evil unto the resurrection of damnation. We believe in future judgment in which every person shall appear before God to be judged according to his or her deeds in this life.',
+  },
+  {
+    title: 'Justification and Character',
+    body: 'We believe that glorious and everlasting life is assured to all who savingly believe in, and obediently follow, Jesus Christ our Lord; and that the finally impenitent shall suffer eternally in hell.',
+  },
 ];
 
 const coreValues = [

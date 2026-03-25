@@ -23,7 +23,7 @@ export default function Footer() {
               </p>
             </div>
             <p className="text-sm text-slate-400 font-light leading-relaxed max-w-xs">
-              Empowering 35 faith communities across the Cape with hope, holiness, and purpose.
+              Empowering 40 faith communities across the Cape with hope, holiness, and purpose.
             </p>
             <div className="flex gap-3 pt-2">
               {['FB', 'IG', 'YT'].map((s) => (
