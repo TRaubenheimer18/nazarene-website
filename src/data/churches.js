@@ -13,7 +13,7 @@ export const churches = [
     area: "Belhar", 
     pastor: "Matthew Simeon",
     time: "Sun 10:00 AM",
-    // image: "https://images.unsplash.com/photo-1548625313-040e92152fa2?auto=format&fit=crop&q=60&w=800"
+    image: require('../assets/Belhar COTN.jpeg')
   },
   { 
     id: "bethany-nazarene", 

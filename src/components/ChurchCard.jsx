@@ -10,13 +10,11 @@ export default function ChurchCard({ church }) {
           <img 
             src={church.image} 
             alt={church.name} 
-            className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
           />
         ) : (
           <div className="w-full h-full bg-navy"></div>
         )}
-        {/* Coastal Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
         
         {/* Area Badge - Styled with Glassmorphism */}
         <div className="absolute top-4 left-6">
