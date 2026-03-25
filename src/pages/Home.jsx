@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CapeTownImg from '../assets/cape-town.jpg';
 import Image2 from '../assets/image2.jpg';
-import Image3 from '../assets/image3.jpg';
 import Image4 from '../assets/image4.jpg'; 
 
 export default function Home() {
@@ -133,5 +132,5 @@ export default function Home() {
 const pillars = [
   { image: Image2, title: 'Holiness', desc: 'Seeking to be a people set apart by God’s grace and love.' },
   { image: Image4, title: 'Fellowship', desc: 'Supporting our pastors and families as one district body.' },
-  { image: Image3, title: 'Mission', desc: 'Actively serving the diverse communities of the Western Cape.' }
+  { title: 'Mission', desc: 'Actively serving the diverse communities of the Western Cape.' }
 ];
