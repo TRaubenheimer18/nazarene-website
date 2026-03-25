@@ -4,7 +4,7 @@ export const churches = [
     name: "Atlantis Church of the Nazarene", 
     area: "Atlantis, Cape Town", 
     pastor: "Nigel Kolkoto",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:30 AM",
     image: require('../assets/Atlantis COTN.jpeg') 
   },
   { 
@@ -44,7 +44,7 @@ export const churches = [
     name: "Bonteheuwel Church of the Nazarene", 
     area: "Bonteheuwel", 
     pastor: "Donovan Ramedies",
-    time: "Sun 09:30 AM",
+    time: "Sun 10:00 AM",
     // image: "https://images.unsplash.com/photo-1548625313-040e92152fa2?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -52,7 +52,7 @@ export const churches = [
     name: "Capricorn Church of the Nazarene", 
     area: "Capricorn", 
     pastor: "Bernard Daniels",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -84,7 +84,7 @@ export const churches = [
     name: "Eastridge Church of the Nazarene", 
     area: "Mitchells Plain", 
     pastor: "Howard Mitchell",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -116,7 +116,7 @@ export const churches = [
     name: "Grace Church of the Nazarene", 
     area: "Cape Town", 
     pastor: "William Bantom",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -124,7 +124,7 @@ export const churches = [
     name: "Green Pastures Church of the Nazarene", 
     area: "Cape Town", 
     pastor: "Fluen Martin",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -132,7 +132,7 @@ export const churches = [
     name: "Groenheuwel Church of the Nazarene", 
     area: "Paarl", 
     pastor: "Esra Maralack",
-    time: "Sun 10:00 AM",
+    time: "Sun 07:00 AM",
     // image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -180,7 +180,7 @@ export const churches = [
     name: "Manenberg Church of the Nazarene", 
     area: "Manenberg", 
     pastor: "Nathan Valensky",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -188,7 +188,7 @@ export const churches = [
     name: "Matroosfontein Church of the Nazarene", 
     area: "Matroosfontein", 
     pastor: "Wayne Davids",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:30 AM",
     // image: "https://images.unsplash.com/photo-1529429611273-0a55f0e3a4df?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -196,7 +196,7 @@ export const churches = [
     name: "Mitchells Plain Church of the Nazarene", 
     area: "Mitchells Plain", 
     pastor: "Gene Pretorius",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:30 AM",
     // image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -220,7 +220,7 @@ export const churches = [
     name: "Northpine Church of the Nazarene", 
     area: "Brackenfell", 
     pastor: "Trevor Rich",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:30 AM",
     // image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -228,7 +228,7 @@ export const churches = [
     name: "Overcome Church of the Nazarene", 
     area: "Cape Town", 
     pastor: "Reginald Subjee",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1515165562835-c3b8c1d6fbb2?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -284,7 +284,7 @@ export const churches = [
     name: "Strandfontein Church of the Nazarene", 
     area: "Strandfontein", 
     pastor: "Reginald Subjee",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1529429611273-0a55f0e3a4df?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -292,7 +292,7 @@ export const churches = [
     name: "Sunnyside Church of the Nazarene", 
     area: "Cape Town", 
     pastor: "Rodger Chetty",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:30 AM",
     // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -300,7 +300,7 @@ export const churches = [
     name: "Victory Church of the Nazarene", 
     area: "Cape Town", 
     pastor: "Liam Amansure",
-    time: "Sun 10:00 AM",
+    time: "Sun 09:00 AM",
     // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
   },
   { 
