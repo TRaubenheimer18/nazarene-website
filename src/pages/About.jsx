@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Img1 from '../assets/image1.jpg';
 
 export default function About() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  }, [hash]);
+
   return (
     <div className="bg-[#FCFAF5] min-h-screen selection:bg-sunset/30">
 
@@ -97,7 +107,7 @@ export default function About() {
       </section>
 
       {/* 3. Statement of Mission */}
-      <section className="py-24 px-6 bg-white">
+      <section id="mission" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-[2px] w-10 bg-sunset"></div>
@@ -134,7 +144,7 @@ export default function About() {
       </section>
 
       {/* 4. Statement of Beliefs */}
-      <section className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="beliefs" className="py-24 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-sunset"></div>
@@ -161,7 +171,7 @@ export default function About() {
       </section>
 
       {/* 5. Core Values */}
-      <section className="py-24 px-6 bg-white">
+      <section id="values" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
@@ -187,7 +197,7 @@ export default function About() {
       </section>
 
       {/* 6. Articles of Faith */}
-      <section className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="articles" className="py-24 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-sunset"></div>

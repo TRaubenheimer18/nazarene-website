@@ -79,7 +79,7 @@ export default function Home() {
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[2px] w-10 bg-sunset"></div>
-              <span className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Core Pillars</span>
+              <span className="text-[10px] font-black text-sunset uppercase tracking-[0.4em]">Who We Are</span>
             </div>
             <h3 className="text-4xl md:text-5xl font-black text-navy tracking-tighter max-w-xl">
               Grounded in Holiness, <br />
@@ -87,22 +87,23 @@ export default function Home() {
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((p, i) => (
-              <div key={i} className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
+              <Link
+                key={i}
+                to={p.to}
+                className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:-translate-y-1 flex flex-col"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <div className="p-10">
-                  <h4 className="text-2xl font-black text-navy mb-4">{p.title}</h4>
-                  <p className="text-slate-500 leading-relaxed">{p.desc}</p>
+                <div className="p-8 flex flex-col flex-1 gap-3">
+                  <p className="text-[10px] font-black text-sunset uppercase tracking-[0.3em]">About Us</p>
+                  <h4 className="text-lg font-black text-navy group-hover:text-sunset transition-colors">{p.title}</h4>
+                  <p className="text-slate-500 text-sm leading-relaxed font-light">{p.desc}</p>
+                  <span className="mt-auto text-[11px] font-black uppercase tracking-widest text-sunset group-hover:translate-x-1 transition-transform inline-block pt-2">Read More →</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -130,7 +131,26 @@ export default function Home() {
 }
 
 const pillars = [
-  { image: Image2, title: 'Holiness', desc: 'Seeking to be a people set apart by God’s grace and love.' },
-  { image: Image4, title: 'Fellowship', desc: 'Supporting our pastors and families as one district body.' },
-  { title: 'Mission', desc: 'Actively serving the diverse communities of the Western Cape.' }
+  {
+    title: 'Statement of Mission',
+    desc: 'Making Christlike disciples in every nation — our Great Commission calling.',
+    to: '/about#mission',
+  },
+  {
+    title: 'Core Values',
+    desc: 'A Christian, Holiness, and Missional people — the essence of our identity.',
+    to: '/about#values',
+  },
+  {
+    image: Image2,
+    title: 'Statement of Beliefs',
+    desc: 'The foundational convictions that unite every Church of the Nazarene.',
+    to: '/about#beliefs',
+  },
+  {
+    image: Image4,
+    title: 'Articles of Faith',
+    desc: 'The constitutional articles that define our doctrine and Christian character.',
+    to: '/about#articles',
+  },
 ];

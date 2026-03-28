@@ -38,9 +38,16 @@ export default function ChurchCard({ church }) {
           </div>
           <div className="flex items-center text-slate-500 text-sm font-light">
             <span className="mr-3 w-5 h-5 flex items-center justify-center bg-sand rounded-lg text-[10px]">⏰</span> 
-            <span className="font-bold text-navy/70 mr-1 uppercase tracking-widest text-[10px]">Sunday:</span> 
+            <span className="font-bold text-navy/70 mr-1 uppercase tracking-widest text-[10px]">Sunday Service:</span> 
             <span className="text-fynbos">{church.time}</span>
           </div>
+          {church.address && (
+            <div className="flex items-start text-slate-500 text-sm font-light">
+              <span className="mr-3 w-5 h-5 flex items-center justify-center bg-sand rounded-lg text-[10px] shrink-0">📍</span>
+              <span className="font-bold text-navy/70 mr-1 uppercase tracking-widest text-[10px]">Address:</span> 
+              <span className="text-fynbos">{church.address}</span>
+            </div>
+          )}
         </div>
 
         {/* 3. Button - Coastal Zen Style */}
