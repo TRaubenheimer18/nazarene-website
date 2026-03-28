@@ -98,7 +98,6 @@ export default function Home() {
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="p-8 flex flex-col flex-1 gap-3">
-                  <p className="text-[10px] font-black text-sunset uppercase tracking-[0.3em]">About Us</p>
                   <h4 className="text-lg font-black text-navy group-hover:text-sunset transition-colors">{p.title}</h4>
                   <p className="text-slate-500 text-sm leading-relaxed font-light">{p.desc}</p>
                   <span className="mt-auto text-[11px] font-black uppercase tracking-widest text-sunset group-hover:translate-x-1 transition-transform inline-block pt-2">Read More →</span>
