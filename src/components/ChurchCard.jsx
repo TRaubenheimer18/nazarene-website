@@ -18,7 +18,7 @@ export default function ChurchCard({ church }) {
         
         {/* Area Badge - Styled with Glassmorphism */}
         <div className="absolute top-4 left-6">
-          <span className="backdrop-blur-md bg-sunset/80 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-white/20">
+          <span className="backdrop-blur-md bg-atlantic text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] border border-white/20">
             {church.area}
           </span>
         </div>
@@ -55,7 +55,7 @@ export default function ChurchCard({ church }) {
           to={`/churches/${church.id}`}
           className="mt-auto relative overflow-hidden group/btn"
         >
-          <div className="w-full text-center py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] border-2 border-sunset text-navy transition-all duration-300 group-hover/btn:bg-sunset group-hover/btn:text-white group-hover/btn:border-sunset">
+          <div className="w-full text-center py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] border-2 border-atlantic text-navy transition-all duration-300 group-hover/btn:bg-atlantic group-hover/btn:text-white group-hover/btn:border-atlantic">
             Explore Profile
           </div>
         </Link>
@@ -63,3 +63,6 @@ export default function ChurchCard({ church }) {
     </div>
   );
 }
+
+
+

@@ -35,7 +35,7 @@ export default function Navbar() {
           <h1 className={`text-xl font-black tracking-tighter transition-colors duration-300 ${
             isScrolled ? "text-navy" : "text-navy"
           }`}>
-            NAZARENE <span className={isScrolled ? "text-logo-teal" : "text-sunset"}>DISTRICT</span>
+            NAZARENE <span className={isScrolled ? "text-logo-teal" : "text-atlantic"}>DISTRICT</span>
           </h1>
           <span className={`text-[8px] font-black uppercase tracking-[0.4em] transition-opacity ${
             isScrolled ? "text-fynbos opacity-60" : "text-fynbos opacity-80"
@@ -58,16 +58,13 @@ export default function Navbar() {
             <Link
               key={tab.name}
               to={tab.path}
-              className={`relative px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-xl hover:bg-sunset/10 ${
+              className={`relative px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-xl hover:bg-atlantic/10 ${
                 isScrolled 
-                  ? (isActive(tab.path) ? "text-sunset" : "text-navy hover:text-sunset") 
-                  : (isActive(tab.path) ? "text-sunset" : "text-fynbos hover:text-sunset")
+                  ? (isActive(tab.path) ? "text-atlantic" : "text-navy hover:text-atlantic") 
+                  : (isActive(tab.path) ? "text-atlantic" : "text-fynbos hover:text-atlantic")
               }`}
             >
               {tab.name}
-              {isActive(tab.path) && (
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-sunset rounded-full"></div>
-              )}
             </Link>
           ))}
         </div>
@@ -77,8 +74,8 @@ export default function Navbar() {
           to="/contact" 
           className={`hidden md:block px-6 py-2.5 rounded-full font-black text-[10px] uppercase tracking-widest transition-all duration-300 ${
             isScrolled 
-            ? "bg-navy text-white hover:bg-sunset shadow-lg" 
-            : "bg-white text-navy hover:bg-sunset hover:text-white"
+            ? "bg-navy text-white hover:bg-atlantic shadow-lg" 
+            : "bg-white text-navy hover:bg-atlantic hover:text-white"
           }`}
         >
           Get Involved
@@ -93,3 +90,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

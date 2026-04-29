@@ -11,7 +11,7 @@ export default function Churches() {
   );
 
   return (
-    <div className="bg-[#FCFAF5] min-h-screen selection:bg-sunset/30">
+    <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
       
       {/* 1. Header Section - Using the deep Atlantic Mesh style */}
       <div className="relative py-28 px-6 text-center overflow-hidden">
@@ -20,7 +20,7 @@ export default function Churches() {
         
         <div className="relative z-10">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
-            <span className="text-sand">District </span><span className="text-sand italic font-serif">Churches</span>
+            <span className="text-atlantic">District </span><span className="text-atlantic italic font-serif">Churches</span>
           </h1>
           <p className="text-sky/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">
             A family of 40 communities across the Western Cape, <br/> 
@@ -29,7 +29,7 @@ export default function Churches() {
         </div>
       </div>
 
-      {/* 2. Search Bar Section - Floating with Sunset Focus */}
+      {/* 2. Search Bar Section - Floating with atlantic Focus */}
       <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-20">
         <div className="bg-white p-2 rounded-[2.5rem] shadow-2xl shadow-navy/10 border border-slate-100 group transition-all">
           <div className="relative flex items-center">
@@ -37,16 +37,16 @@ export default function Churches() {
              <input
                 type="text"
                 placeholder="Find a church by name or suburb..."
-                className="w-full pl-16 pr-8 py-5 rounded-[2rem] border-none focus:ring-2 focus:ring-sunset/50 outline-none text-navy text-lg placeholder:text-slate-300 transition-all bg-transparent"
+                className="w-full pl-16 pr-8 py-5 rounded-[2rem] border-none focus:ring-2 focus:ring-atlantic/50 outline-none text-navy-blue text-lg placeholder:text-slate-300 transition-all bg-transparent"
                 onChange={(e) => setSearchTerm(e.target.value)}
              />
           </div>
         </div>
         <div className="mt-6 flex justify-between items-center px-4">
-           <p className="text-fynbos/60 text-xs font-black uppercase tracking-[0.2em]">
+           <p className="text-cloud/60 text-xs font-black uppercase tracking-[0.2em]">
              Directory Filter
            </p>
-           <p className="text-navy font-bold text-sm bg-sand px-4 py-1 rounded-full">
+           <p className="text-navy-blue font-bold text-sm bg-sand/60 px-4 py-1 rounded-full">
              {filteredChurches.length} Congregations
            </p>
         </div>
@@ -61,14 +61,14 @@ export default function Churches() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-32 bg-white rounded-[3rem] border border-dashed border-sand shadow-inner">
+          <div className="text-center py-32 bg-white rounded-[3rem] border border-dashed border-sand/60 shadow-inner">
             <div className="text-6xl mb-6 opacity-20">⛵</div>
-            <p className="text-fynbos/40 text-2xl font-light italic">
+            <p className="text-cloud/40 text-2xl font-light italic">
               No churches found matching your search.
             </p>
             <button 
               onClick={() => setSearchTerm("")}
-              className="mt-6 text-red font-bold hover:underline tracking-widest uppercase text-xs"
+              className="mt-6 text-crimson font-bold hover:underline tracking-widest uppercase text-xs"
             >
               Clear Search
             </button>
@@ -78,13 +78,17 @@ export default function Churches() {
 
       {/* 4. Bottom Support Section */}
       <div className="max-w-4xl mx-auto pb-24 px-6 text-center">
-        <div className="h-[1px] w-20 bg-sunset mx-auto mb-8 opacity-40"></div>
-        {/* <p className="text-slate-400 text-sm italic">
+        <div className="h-[1px] w-20 bg-crimson mx-auto mb-8 opacity-40"></div>
+        {/* <p className="text-cloud/70 text-sm italic">
           Are you a pastor looking to register a new church? <br/>
-          Contact the <span className="text-navy font-bold">Western Cape District Office</span>.
+          Contact the <span className="text-navy-blue font-bold">Western Cape District Office</span>.
         </p> */}
       </div>
 
     </div>
   );
 }
+
+
+
+

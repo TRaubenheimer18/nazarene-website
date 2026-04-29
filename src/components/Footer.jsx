@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-4">
             <div>
               <h2 className="text-xl font-black tracking-tighter text-navy leading-none">
-                NAZARENE <span className="text-sunset">DISTRICT</span>
+                NAZARENE <span className="text-atlantic">DISTRICT</span>
               </h2>
               <p className="text-[9px] font-black uppercase tracking-[0.4em] text-navy/30 mt-1">
                 Western Cape
@@ -29,7 +29,7 @@ export default function Footer() {
               {['FB', 'IG', 'YT'].map((s) => (
                 <span
                   key={s}
-                  className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-[9px] font-black tracking-widest text-slate-400 hover:border-sunset hover:text-sunset transition-all cursor-pointer"
+                  className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-[9px] font-black tracking-widest text-slate-400 hover:border-atlantic hover:text-atlantic transition-all cursor-pointer"
                 >
                   {s}
                 </span>
@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Navigation Column */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-sunset">Navigate</h4>
+            <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-atlantic">Navigate</h4>
             <ul className="space-y-3">
               {[
                 { label: 'Home', to: '/' },
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className="md:col-span-4 space-y-4">
-            <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-sunset">Get in Touch</h4>
+            <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-atlantic">Get in Touch</h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 text-slate-300">📍</span>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <span className="text-slate-300">✉️</span>
                 <a
                   href="mailto:info@wcnazarene.org"
-                  className="hover:text-sunset transition-colors underline decoration-slate-200 underline-offset-4"
+                  className="hover:text-atlantic transition-colors underline decoration-slate-200 underline-offset-4"
                 >
                   info@wcnazarene.org
                 </a>
@@ -111,3 +111,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
