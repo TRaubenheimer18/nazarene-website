@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
@@ -57,6 +58,7 @@ import WellingtonProfile from "./pages/ChurchProfiles/WellingtonProfile";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
 
       <div className="min-h-screen">

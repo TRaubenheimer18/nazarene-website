@@ -14,10 +14,10 @@ export default function About() {
   }, [hash]);
 
   return (
-    <div className="bg-[#FCFAF5] min-h-screen selection:bg-atlantic/30">
+    <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
 
       {/* 1. Hero */}
-      <section className="relative bg-navy py-28 px-6 text-center overflow-hidden">
+      <section className="relative py-28 px-6 text-center overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -54,7 +54,7 @@ export default function About() {
       </section>
 
       {/* 2. Mission & Vision */}
-      <section className="py-28 px-6 bg-[#FCFAF5]">
+      <section className="py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
 
           <div className="flex items-center gap-4 mb-16">
@@ -77,10 +77,10 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="relative bg-navy rounded-[2rem] p-10 overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-crimson rounded-l-[2rem]"></div>
-                <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-4">The Vision</p>
-                <p className="text-slate-500 font-serif italic text-xl leading-relaxed">
+              <div className="relative bg-white rounded-[1.5rem] p-7 overflow-hidden">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-crimson rounded-l-[1.5rem]"></div>
+                <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-3">The Vision</p>
+                <p className="text-slate-500 font-serif italic text-base leading-relaxed">
                   &ldquo;To see a vibrant, holiness-centered Nazarene presence in every town
                   of the Western Cape, bringing hope to the broken and light to the dark.&rdquo;
                 </p>
@@ -107,7 +107,7 @@ export default function About() {
       </section>
 
       {/* 3. Statement of Mission */}
-      <section id="mission" className="py-24 px-6 bg-white">
+      <section id="mission" className="py-24 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-[2px] w-10 bg-crimson"></div>
@@ -130,7 +130,7 @@ export default function About() {
 
             <div className="flex flex-col gap-6">
               {missionEssentials.map((e, i) => (
-                <div key={i} className="flex items-start gap-6 p-6 rounded-[1.5rem] border border-sand/50 bg-sand/20">
+                <div key={i} className="flex items-start gap-6 p-6 rounded-[1.5rem] border border-slate-100 bg-white">
                   <div className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center text-lg shrink-0">{e.icon}</div>
                   <div>
                     <h4 className="font-black text-navy-blue uppercase tracking-widest text-sm mb-1">{e.title}</h4>
@@ -144,7 +144,7 @@ export default function About() {
       </section>
 
       {/* 4. Statement of Beliefs */}
-      <section id="beliefs" className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="beliefs" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson"></div>
@@ -159,7 +159,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-4">
             {beliefs.map((b, i) => (
-              <div key={i} className="flex gap-6 bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
+              <div key={i} className="flex gap-6 bg-[#FCFAF5] rounded-2xl p-7 border border-slate-100 shadow-sm">
                 <span className="text-[11px] font-black text-crimson tracking-[0.2em] shrink-0 pt-0.5">{String(i + 1).padStart(2, '0')}</span>
                 <p className="text-slate-500 text-sm leading-relaxed font-light">
                   <span className="font-bold text-navy-blue">We believe </span>{b}
@@ -171,7 +171,7 @@ export default function About() {
       </section>
 
       {/* 5. Core Values */}
-      <section id="values" className="py-24 px-6 bg-white">
+      <section id="values" className="py-24 px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
@@ -185,7 +185,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {coreValues.map((v, i) => (
-              <div key={i} className="bg-[#FCFAF5] p-10 rounded-[2.5rem] border border-slate-100">
+              <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-slate-100">
                 {/* <div className="w-12 h-12 bg-sand/50 rounded-2xl flex items-center justify-center text-2xl mb-6">{v.icon}</div> */}
                 {/* <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-2">Core Value</p> */}
                 <h4 className="text-xl font-black text-crimson mb-4">{v.title}</h4>
@@ -197,14 +197,14 @@ export default function About() {
       </section>
 
       {/* 6. Articles of Faith */}
-      <section id="articles" className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="articles" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson"></div>
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Articles of Faith</span>
           </div>
           <h3 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter mb-8">The Constitution of Our Faith.</h3>
-          <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm mb-10">
+          <div className="bg-[#FCFAF5] rounded-[2rem] p-8 border border-slate-100 shadow-sm mb-10">
             <p className="text-slate-500 text-base font-light leading-relaxed">
               In order that we may preserve our God-given heritage, the faith once delivered to the saints, especially the doctrine and experience of entire sanctification as a second work of grace, and also that we may cooperate effectually with other branches of the Church of Jesus Christ in advancing God's kingdom, we, the ministers and lay members of the Church of the Nazarene, in accordance with the principles of constitutional legislation established among us, do hereby ordain, adopt, and set forth as the fundamental law or Constitution of the Church of the Nazarene the Articles of Faith, the Covenant of Christian Character, and the Articles of Organization and Government here following, to wit:
             </p>
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* 7. Our History */}
-      <section className="py-28 px-6 bg-[#FCFAF5]">
+      <section className="py-28 px-6 bg-[#FCFAF5] border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
 
           <div className="flex items-center gap-4 mb-6">
@@ -340,12 +340,12 @@ const beliefs = [
 function ArticlesOfFaith() {
   const [active, setActive] = useState(null);
   return (
-    <div className="divide-y divide-slate-100 border border-slate-100 rounded-[2rem] overflow-hidden bg-white shadow-sm">
+    <div className="divide-y divide-slate-100 border border-slate-100 rounded-[2rem] overflow-hidden bg-[#FCFAF5] shadow-sm">
       {articles.map((a, i) => (
         <div key={i}>
           <button
             onClick={() => setActive(active === i ? null : i)}
-            className="w-full flex items-center gap-5 px-8 py-5 text-left hover:bg-[#FCFAF5] transition-colors group"
+            className="w-full flex items-center gap-5 px-8 py-5 text-left hover:bg-white transition-colors group"
           >
             <span className="text-[10px] font-black tracking-[0.2em] text-crimson shrink-0 w-6">
               {String(i + 1).padStart(2, '0')}

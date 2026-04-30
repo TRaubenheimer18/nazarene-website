@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="bg-[#FCFAF5] min-h-screen selection:bg-atlantic/30">
+    <div className="min-h-screen selection:bg-atlantic/30">
 
       {/* 1. Hero */}
       <section className="relative bg-navy py-28 px-6 text-center overflow-hidden">
@@ -26,7 +26,7 @@ export default function Contact() {
       </section>
 
       {/* 2. Contact Content */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
 
           {/* Left: Info */}
@@ -37,12 +37,12 @@ export default function Contact() {
                 <div className="h-[2px] w-10 bg-atlantic"></div>
                 <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">District Office</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-navy tracking-tighter leading-tight mb-8">
+              <h2 className="text-3xl md:text-4xl font-black text-navy-blue tracking-tighter leading-tight mb-8">
                 Headquarters.
               </h2>
             </div>
 
-            <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm space-y-6">
+            <div className="bg-[#FCFAF5] rounded-[2rem] p-8 border border-slate-100 shadow-sm space-y-6">
               {[
                 { icon: '📍', label: 'Address', value: 'P.O Box 42624, Lotus River, Cape Town, 7854' },
                 { icon: '📞', label: 'Phone', value: '+27 (21) 000 0000' },
@@ -62,7 +62,7 @@ export default function Contact() {
             <div className="relative bg-navy rounded-[2rem] p-8 overflow-hidden">
               <div className="absolute top-0 left-0 w-1.5 h-full bg-atlantic rounded-l-[2rem]"></div>
               <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-3">Our Commitment</p>
-              <p className="text-black/70 font-light text-sm leading-relaxed">
+              <p className="text-black font-light text-sm leading-relaxed">
                 We aim to respond to all inquiries within 2 business days. For urgent pastoral matters, please call the district office directly.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white p-10 md:p-14 rounded-[2.5rem] border border-slate-100 shadow-sm">
+            <div className="bg-[#FCFAF5] p-10 md:p-14 rounded-[2.5rem] border border-slate-100 shadow-sm">
 
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-[2px] w-10 bg-atlantic"></div>
