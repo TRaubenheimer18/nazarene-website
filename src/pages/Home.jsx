@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CapeTownImg from '../assets/cape-town.jpg';
 import Image2 from '../assets/image2.jpg';
-import Image4 from '../assets/image4.jpg'; 
+import Image4 from '../assets/image4.jpg';
+import VisionMap from '../assets/vision map.jpeg';
 
 export default function Home() {
   return (
@@ -73,6 +74,33 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Vision Map */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[2px] w-10 bg-crimson"></div>
+                <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Our Vision</span>
+              </div>
+              <h3 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter max-w-xl">
+                Where We Are <br />
+                <span className="text-crimson">Going Together.</span>
+              </h3>
+            </div>
+            <p className="text-slate-500 text-sm font-light leading-relaxed max-w-sm">
+              A strategic roadmap guiding our 40 congregations toward a unified mission across every corner of the Western Cape.
+            </p>
+          </div>
+          <div className="rounded-[2rem]">
+            <img src={VisionMap} alt="Vision Map" className="w-full object-cover" />
+          </div>
+          <p className="text-center text-slate-400 text-xs uppercase tracking-[0.3em] mt-4 font-semibold">
+            Western Cape District · Church of the Nazarene
+          </p>
+        </div>
+      </section>
+
       {/* 3. Core Pillars */}
       <section className="py-32 px-6 bg-sand/20">
         <div className="max-w-7xl mx-auto">
@@ -83,7 +111,7 @@ export default function Home() {
             </div>
             <h3 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter max-w-xl">
               Grounded in Holiness, <br />
-              <span className="text-fynbos">Driven by Mission.</span>
+              <span className="text-crimson">Driven by Mission.</span>
             </h3>
           </div>
 
@@ -98,7 +126,7 @@ export default function Home() {
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="p-8 flex flex-col flex-1 gap-3">
-                  <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em]">About Us</p>
+                  {/* <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em]">About Us</p> */}
                   <h4 className="text-lg font-black text-navy-blue group-hover:text-atlantic transition-colors">{p.title}</h4>
                   <p className="text-slate-500 text-sm leading-relaxed font-light">{p.desc}</p>
                   <span className="mt-auto text-[11px] font-black uppercase tracking-widest text-crimson group-hover:translate-x-1 transition-transform inline-block pt-2">Read More →</span>
