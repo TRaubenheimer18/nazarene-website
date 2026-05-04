@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* 3. Core Pillars */}
-      <section className="py-32 px-6 bg-sand/20">
+      <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-6">
