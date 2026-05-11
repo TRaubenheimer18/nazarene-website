@@ -17,7 +17,7 @@ export default function About() {
     <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
 
       {/* 1. Hero */}
-      <section className="relative py-28 px-6 text-center overflow-hidden">
+      <section className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -26,11 +26,11 @@ export default function About() {
             {/* <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.5em]">Established in Faith</span> */}
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
             <span className="text-atlantic">Western Cape </span><span className="text-atlantic italic font-serif">District</span>
           </h1>
 
-          <p className="text-sky/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-sky/80 font-light max-w-2xl mx-auto leading-relaxed">
             A movement of 40 Great Commission churches woven into the fabric of the Cape,<br />
             dedicated to making Christlike disciples in every community.
           </p>
@@ -54,7 +54,7 @@ export default function About() {
       </section>
 
       {/* 2. Mission & Vision */}
-      <section className="py-28 px-6 bg-white">
+      <section className="py-16 md:py-28 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
 
           <div className="flex items-center gap-4 mb-16">
@@ -62,7 +62,7 @@ export default function About() {
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Our Calling</span>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
 
             <div className="space-y-10">
               <div>
@@ -87,7 +87,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative rounded-[2.5rem] overflow-hidden h-[480px] shadow-2xl shadow-navy/20">
+            <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-64 md:h-[480px] shadow-2xl shadow-navy/20">
               <img src={Img1} alt="Western Cape" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
               {/* <div className="absolute bottom-8 left-8 right-8 grid grid-cols-2 gap-4">
@@ -107,14 +107,14 @@ export default function About() {
       </section>
 
       {/* 3. Statement of Mission */}
-      <section id="mission" className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="mission" className="py-16 md:py-24 px-4 md:px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-[2px] w-10 bg-crimson"></div>
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Statement of Mission</span>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
             <div>
               <h3 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter leading-tight mb-6">
                 Making Christlike <br />
@@ -144,7 +144,7 @@ export default function About() {
       </section>
 
       {/* 4. Statement of Beliefs */}
-      <section id="beliefs" className="py-24 px-6 bg-white">
+      <section id="beliefs" className="py-16 md:py-24 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson"></div>
@@ -157,7 +157,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {beliefs.map((b, i) => (
               <div key={i} className="flex gap-6 bg-[#FCFAF5] rounded-2xl p-7 border border-slate-100 shadow-sm">
                 <span className="text-[11px] font-black text-crimson tracking-[0.2em] shrink-0 pt-0.5">{String(i + 1).padStart(2, '0')}</span>
@@ -171,7 +171,7 @@ export default function About() {
       </section>
 
       {/* 5. Core Values */}
-      <section id="values" className="py-24 px-6 bg-[#FCFAF5]">
+      <section id="values" className="py-16 md:py-24 px-4 md:px-6 bg-[#FCFAF5]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
@@ -183,9 +183,9 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {coreValues.map((v, i) => (
-              <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-slate-100">
+              <div key={i} className="bg-white p-7 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100">
                 {/* <div className="w-12 h-12 bg-sand/50 rounded-2xl flex items-center justify-center text-2xl mb-6">{v.icon}</div> */}
                 {/* <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-2">Core Value</p> */}
                 <h4 className="text-xl font-black text-crimson mb-4">{v.title}</h4>
@@ -197,13 +197,13 @@ export default function About() {
       </section>
 
       {/* 6. Articles of Faith */}
-      <section id="articles" className="py-24 px-6 bg-white">
+      <section id="articles" className="py-16 md:py-24 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson"></div>
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Articles of Faith</span>
           </div>
-          <h3 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter mb-8">The Constitution of Our Faith.</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-navy-blue tracking-tighter mb-8">The Constitution of Our Faith.</h3>
           <div className="bg-[#FCFAF5] rounded-[2rem] p-8 border border-slate-100 shadow-sm mb-10">
             <p className="text-slate-500 text-base font-light leading-relaxed">
               In order that we may preserve our God-given heritage, the faith once delivered to the saints, especially the doctrine and experience of entire sanctification as a second work of grace, and also that we may cooperate effectually with other branches of the Church of Jesus Christ in advancing God's kingdom, we, the ministers and lay members of the Church of the Nazarene, in accordance with the principles of constitutional legislation established among us, do hereby ordain, adopt, and set forth as the fundamental law or Constitution of the Church of the Nazarene the Articles of Faith, the Covenant of Christian Character, and the Articles of Organization and Government here following, to wit:
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* 7. Our History */}
-      <section className="py-28 px-6 bg-[#FCFAF5] border-t border-slate-100">
+      <section className="py-16 md:py-28 px-4 md:px-6 bg-[#FCFAF5] border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
 
           <div className="flex items-center gap-4 mb-6">
@@ -244,7 +244,7 @@ export default function About() {
           </div>
 
           {/* Two themes */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 
             <div className="bg-white rounded-[2rem] p-10 border border-slate-100 shadow-sm">
               <div className="flex items-center gap-4 mb-6">

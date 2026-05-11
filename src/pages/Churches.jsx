@@ -14,15 +14,15 @@ export default function Churches() {
     <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
       
       {/* 1. Header Section - Using the deep Atlantic Mesh style */}
-      <div className="relative py-28 px-6 text-center overflow-hidden">
+      <div className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
         {/* Subtle background glow to match Home/About */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
         
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
             <span className="text-atlantic">District </span><span className="text-atlantic italic font-serif">Churches</span>
           </h1>
-          <p className="text-sky/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-sky/80 font-light max-w-2xl mx-auto leading-relaxed">
             A family of 40 communities across the Western Cape, <br/> 
             bound by faith and service.
           </p>
@@ -30,14 +30,14 @@ export default function Churches() {
       </div>
 
       {/* 2. Search Bar Section - Floating with atlantic Focus */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-20">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 -mt-6 md:-mt-10 relative z-20">
         <div className="bg-white p-2 rounded-[2.5rem] shadow-2xl shadow-navy/10 border border-slate-100 group transition-all">
           <div className="relative flex items-center">
              <span className="absolute left-6 text-2xl group-focus-within:scale-110 transition-transform">🔍</span>
              <input
                 type="text"
                 placeholder="Find a church by name or suburb..."
-                className="w-full pl-16 pr-8 py-5 rounded-[2rem] border-none focus:ring-2 focus:ring-atlantic/50 outline-none text-navy-blue text-lg placeholder:text-slate-300 transition-all bg-transparent"
+                className="w-full pl-14 md:pl-16 pr-4 md:pr-8 py-4 md:py-5 rounded-[2rem] border-none focus:ring-2 focus:ring-atlantic/50 outline-none text-navy-blue text-base md:text-lg placeholder:text-slate-300 transition-all bg-transparent"
                 onChange={(e) => setSearchTerm(e.target.value)}
              />
           </div>
@@ -53,9 +53,9 @@ export default function Churches() {
       </div>
 
       {/* 3. Grid Section - Using Atlantic & Sand accents in cards */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
         {filteredChurches.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
             {filteredChurches.map((church) => (
               <ChurchCard key={church.id} church={church} />
             ))}

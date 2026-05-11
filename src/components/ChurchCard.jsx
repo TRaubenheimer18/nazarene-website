@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function ChurchCard({ church }) {
   return (
-    <div className="group bg-white rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-navy/10 transition-all duration-700 overflow-hidden border border-sand/50 flex flex-col h-full">
+    <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-navy/10 transition-all duration-700 overflow-hidden border border-sand/50 flex flex-col h-full">
       
       {/* 1. Visual Header - Clean & Atmospheric */}
       <div className="relative h-48 bg-navy overflow-hidden">
@@ -25,12 +25,12 @@ export default function ChurchCard({ church }) {
       </div>
 
       {/* 2. Content Area - Refined Typography */}
-      <div className="p-8 flex-grow flex flex-col bg-white">
-        <h3 className="text-2xl font-black text-navy mb-5 group-hover:text-teal transition-colors leading-tight tracking-tighter">
+      <div className="p-5 md:p-8 flex-grow flex flex-col bg-white">
+        <h3 className="text-lg md:text-2xl font-black text-navy mb-4 md:mb-5 group-hover:text-teal transition-colors leading-tight tracking-tighter">
           {church.name}
         </h3>
 
-        <div className="space-y-4 mb-10">
+        <div className="space-y-3 md:space-y-4 mb-6 md:mb-10">
           <div className="flex items-center text-slate-500 text-sm font-light">
             <span className="mr-3 w-5 h-5 flex items-center justify-center bg-sand rounded-lg text-[10px]">👤</span> 
             <span className="font-bold text-navy/70 mr-1 uppercase tracking-widest text-[10px]">Pastor:</span> 

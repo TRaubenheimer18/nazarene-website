@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="min-h-screen selection:bg-atlantic/30">
 
       {/* 1. Hero */}
-      <section className="relative bg-navy py-28 px-6 text-center overflow-hidden">
+      <section className="relative bg-navy py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -14,11 +14,11 @@ export default function Contact() {
             {/* <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.5em]">We'd Love to Hear From You</span> */}
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
             <span className="text-atlantic">Get in </span><span className="text-atlantic italic font-serif">Touch.</span>
           </h1>
 
-          <p className="text-sky/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-sky/80 font-light max-w-2xl mx-auto leading-relaxed">
             Whether you're looking for a church home or have a question for the district office,<br />
             we are here to listen and serve.
           </p>
@@ -26,8 +26,8 @@ export default function Contact() {
       </section>
 
       {/* 2. Contact Content */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+      <section className="py-16 md:py-24 px-4 md:px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
 
           {/* Left: Info */}
           <div className="lg:col-span-5 space-y-6">
@@ -42,7 +42,7 @@ export default function Contact() {
               </h2>
             </div>
 
-            <div className="bg-[#FCFAF5] rounded-[2rem] p-8 border border-slate-100 shadow-sm space-y-6">
+            <div className="bg-[#FCFAF5] rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm space-y-6">
               {[
                 { icon: '📍', label: 'Address', value: 'P.O Box 42624, Lotus River, Cape Town, 7854' },
                 { icon: '📞', label: 'Phone', value: '+27 (21) 000 0000' },
@@ -71,7 +71,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#FCFAF5] p-10 md:p-14 rounded-[2.5rem] border border-slate-100 shadow-sm">
+            <div className="bg-[#FCFAF5] p-7 md:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 shadow-sm">
 
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-[2px] w-10 bg-atlantic"></div>
@@ -79,7 +79,7 @@ export default function Contact() {
               </div>
 
               <form className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div className="relative">
                     <input type="text" id="name" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent" placeholder="Name" />
                     <label htmlFor="name" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-atlantic transition-all">Full Name</label>

@@ -51,21 +51,6 @@ export default function AtlantisProfile() {
 
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
 
-        {/* Quick Info */}
-        {/* <div className="grid sm:grid-cols-3 gap-6">
-          {[
-            { label: 'Pastor', value: church.pastor, icon: '👤' },
-            { label: 'Sunday Service', value: church.time, icon: '⏰' },
-            { label: 'Address', value: church.address || 'To be added', icon: '📍' },
-          ].map((item, i) => (
-            <div key={i} className="bg-sand/30 rounded-[1.5rem] p-6 border border-sand">
-              <span className="text-2xl mb-3 block">{item.icon}</span>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">{item.label}</p>
-              <p className="text-navy-blue font-semibold text-sm">{item.value}</p>
-            </div>
-          ))}
-        </div> */}
-
         {/* Current Pastor */}
         <div>
           <div className="flex items-center gap-4 mb-8">
@@ -131,7 +116,8 @@ export default function AtlantisProfile() {
             <div className="h-[2px] w-10 bg-crimson" />
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Services & Times</span>
           </div>
-          <p className="text-slate-400 italic text-sm">No additional service times added yet.</p>
+          <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Sunday Service</p>
+          <p className="text-navy-blue font-semibold text-sm">{church.time}</p>
         </div>
 
         {/* Contact */}

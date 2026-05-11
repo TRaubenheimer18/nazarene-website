@@ -52,6 +52,7 @@ export default function Navbar() {
             { name: "Churches", path: "/churches" },
             { name: "Ministries", path: "/ministries" },
             { name: "Events", path: "/events" },
+            { name: "Calendar", path: "/calendar" },
             { name: "College", path: "/college" },
             { name: "Contact", path: "/contact" },
           ].map((tab) => (

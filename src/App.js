@@ -14,6 +14,7 @@ import Resources from "./pages/Resources";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import College from "./pages/College";
+import Calendar from "./pages/Calendar";
 import AtlantisProfile from "./pages/ChurchProfiles/AtlantisProfile";
 import BelharProfile from "./pages/ChurchProfiles/BelharProfile";
 import BethanyProfile from "./pages/ChurchProfiles/BethanyProfile";
@@ -108,6 +109,7 @@ function App() {
           <Route path="/churches/wellington-nazarene" element={<WellingtonProfile />} />
           <Route path="/ministries" element={<Ministries />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/calendar" element={<Calendar />} />
           <Route path="/college" element={<College />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/gallery" element={<Gallery />} />
