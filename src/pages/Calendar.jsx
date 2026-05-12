@@ -13,9 +13,9 @@ const DEPT_COLORS = {
 
 // Add events here: { title, department, year, month (1-12), day, time?, location?, description? }
 const EVENTS = [
-  { title: 'Youth Week', department: 'NYI', year: 2025, month: 5, day: 27, time: '7:00 PM', location: 'Belhar Church of the Nazarene' },
-  { title: 'Youth Week', department: 'NYI', year: 2025, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
-  { title: 'Youth Week', department: 'NYI', year: 2025, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, time: '7:00 PM', location: 'Belhar Church of the Nazarene' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
 ];
 
 const MONTH_NAMES = [
