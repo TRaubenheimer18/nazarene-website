@@ -157,7 +157,7 @@ export default function Events() {
       </div>
 
       {/* Footer CTA */}
-      <div className="border-t border-slate-100 bg-[#FCFAF5] py-16 px-6">
+      {/* <div className="bg-white py-16 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-4 mb-2">
@@ -176,7 +176,7 @@ export default function Events() {
             View Full Calendar →
           </a>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
