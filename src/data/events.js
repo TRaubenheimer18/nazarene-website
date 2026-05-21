@@ -10,9 +10,7 @@ export const DEPT_COLORS = {
 export const DEPARTMENTS = ['All', 'District', 'NMI', 'NYI', 'NDI', 'Church Plant', 'Campaign & Rally'];
 
 export const EVENTS = [
-  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, dayEnd: 29, time: '7:00 PM', location: 'Various Churches' },
-  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
-  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
+  
 
   // District
   { title: 'Ground Dedication', department: 'District', year: 2025, month: 12, day: 14 },
@@ -35,6 +33,9 @@ export const EVENTS = [
 
   // NYI
   { title: 'Sports Day', department: 'NYI', year: 2026, month: 4, day: 4 },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, dayEnd: 29, time: '7:00 PM', location: 'Various Churches' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
   { title: 'Stay Awake', department: 'NYI', year: 2026, month: 6, day: 15 },
   { title: 'Stay Awake', department: 'NYI', year: 2026, month: 6, day: 16 },
   { title: 'Convention', department: 'NYI', year: 2026, month: 10, day: 10 },

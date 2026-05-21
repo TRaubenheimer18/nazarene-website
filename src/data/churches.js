@@ -318,7 +318,7 @@ export const churches = [
   },
   { 
     id: "restoration-nazarene", 
-    name: "Heideveld Church of the Nazarene", 
+    name: "Restoration Church of the Nazarene", 
     area: "Heideveld", 
     pastor: "Daniel Carelse",
     time: "09:30 AM",
@@ -329,7 +329,7 @@ export const churches = [
     onlineService: false,
     outreach: "Open airs, prayer walks, cottage meetings, soup kitchen",
     pastorBio: "Pastor Daniel Carelse is the lead pastor of Heideveld Church of the Nazarene. Over four years in ministry, he has become known for steady leadership, compassionate spirit, and dedication to spiritual growth. In January 2025, he graduated from the Nazarene Theological College (NTC). His ministry is rooted in teaching and evangelism, with a vision to see restoration in individuals, families, and communities through the power of the Gospel.",
-    // image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&q=60&w=800"
+    image: require('../assets/Restoration COTN.jpeg')
   },
   { 
     id: "ruach-nazarene", 
@@ -380,7 +380,7 @@ export const churches = [
     pastor: "Liam Amansure",
     time: "09:00 AM",
     address: "127 Angela Street, Valhalla Park",
-    // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
+    image: require('../assets/Victory COTN.jpeg')
   },
   { 
     id: "wesbank-nazarene", 
