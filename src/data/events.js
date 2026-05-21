@@ -10,7 +10,7 @@ export const DEPT_COLORS = {
 export const DEPARTMENTS = ['All', 'District', 'NMI', 'NYI', 'NDI', 'Church Plant', 'Campaign & Rally'];
 
 export const EVENTS = [
-  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, time: '7:00 PM', location: 'Belhar Church of the Nazarene' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, dayEnd: 29, time: '7:00 PM', location: 'Various Churches' },
   { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
   { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
 
@@ -37,7 +37,6 @@ export const EVENTS = [
   { title: 'Sports Day', department: 'NYI', year: 2026, month: 4, day: 4 },
   { title: 'Stay Awake', department: 'NYI', year: 2026, month: 6, day: 15 },
   { title: 'Stay Awake', department: 'NYI', year: 2026, month: 6, day: 16 },
-  { title: 'Bible Quiz', department: 'NYI', year: 2026, month: 8, day: 30 },
   { title: 'Convention', department: 'NYI', year: 2026, month: 10, day: 10 },
 
   // NDI

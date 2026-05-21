@@ -31,11 +31,11 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
         {/* <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { label: 'Pastor', value: church.pastor, icon: '👤' },
-            { label: 'Sunday Service', value: church.time, icon: '⏰' },
-            { label: 'Address', value: church.address || 'To be added', icon: '📍' },
+            { label: 'Pastor', value: church.pastor},
+            { label: 'Sunday Service', value: church.time},
+            { label: 'Address', value: church.address || 'To be added'},
           ].map((item, i) => (
-            <div key={i} className="bg-sand/30 rounded-[1.5rem] p-6 border border-sand">
+            <div key={i} className="bg-white rounded-[1.5rem]">
               <span className="text-2xl mb-3 block">{item.icon}</span>
               <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">{item.label}</p>
               <p className="text-navy-blue font-semibold text-sm">{item.value}</p>

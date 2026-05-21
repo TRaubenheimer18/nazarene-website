@@ -1,4 +1,6 @@
 import { EVENTS, DEPT_COLORS } from '../data/events';
+import NYILogo from '../assets/NYI-logo.jpeg';
+import NazareneLogo from '../assets/Nazarene-logo.jpeg';
 
 const MONTH_NAMES = [
   'January','February','March','April','May','June',
@@ -18,7 +20,9 @@ function getUniqueEventsByDept() {
 }
 
 function formatDate(event) {
-  return `${MONTH_NAMES[event.month - 1]} ${event.day}, ${event.year}`;
+  const month = MONTH_NAMES[event.month - 1];
+  if (event.dayEnd) return `${month} ${event.day}–${event.dayEnd}, ${event.year}`;
+  return `${month} ${event.day}, ${event.year}`;
 }
 
 export default function Events() {
@@ -79,20 +83,27 @@ export default function Events() {
                   key={i}
                   className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col"
                 >
-                  {/* Image placeholder */}
+                  {/* Image area */}
                   <div
                     className="relative h-56 overflow-hidden flex items-end"
                     style={{ backgroundColor: color }}
                   >
-                    {/* Subtle texture overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-
-                    {/* "Image coming soon" label */}
-                    <div className="absolute top-4 right-4 z-10">
-                      <span className="text-[8px] font-black uppercase tracking-[0.15em] text-white/40 bg-black/20 px-2 py-1">
-                        Photo TBA
-                      </span>
-                    </div>
+                    {dept === 'NYI' || dept === 'District' || dept === 'Church Plant' || dept === 'Campaign & Rally' ? (
+                      <img
+                        src={dept === 'NYI' ? NYILogo : NazareneLogo}
+                        alt={dept}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                        <div className="absolute top-4 right-4 z-10">
+                          <span className="text-[8px] font-black uppercase tracking-[0.15em] text-white/40 bg-black/20 px-2 py-1">
+                            Photo TBA
+                          </span>
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* Card body */}
