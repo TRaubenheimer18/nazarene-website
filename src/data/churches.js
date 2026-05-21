@@ -8,6 +8,7 @@ export const churches = [
     address: "43 Berzelia St, Protea Park, Cape Town, 7349",
     youthService: "Friday at 18:30",
     sundaySchool: "Sunday at 08:30",
+    bibleStudy: "Wednesday at 19:00",
     facebook: "https://www.facebook.com/Church-of-the-Nazarene-Atlantis",
     tiktok: "https://www.tiktok.com/@churchofthenazareneatl",
     onlineService: true,

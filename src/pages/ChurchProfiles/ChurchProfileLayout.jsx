@@ -29,11 +29,11 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
-        {/* <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6">
           {[
-            { label: 'Pastor', value: church.pastor},
-            { label: 'Sunday Service', value: church.time},
-            { label: 'Address', value: church.address || 'To be added'},
+            { label: 'Sunday School', value: church.sundaySchool},
+            { label: 'Bible Study', value: church.bibleStudy},
+            { label: 'Youth Service', value: church.youthService},
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-[1.5rem]">
               <span className="text-2xl mb-3 block">{item.icon}</span>
@@ -41,7 +41,7 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
               <p className="text-navy-blue font-semibold text-sm">{item.value}</p>
             </div>
           ))}
-        </div> */}
+        </div>
 
         {/* Pastor Bio */}
         {(church.pastorBio || church.pastorImage) && (
@@ -92,6 +92,26 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
           </div>
         )}
 
+        {/* Local Pastors */}
+        {church.localPastors && (
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-[2px] w-10 bg-crimson" />
+              <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Local Pastors</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {church.localPastors.map((pastor, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-3">
+                  <div className="w-full aspect-[5/3] bg-sand/40 border-2 border-sand flex items-center justify-center text-slate-400 text-xs font-black uppercase tracking-widest">
+                    Photo
+                  </div>
+                  <p className="text-sm font-bold text-navy-blue leading-tight">{pastor.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Services & Times */}
         <div>
           <div className="flex items-center gap-4 mb-6">
@@ -103,6 +123,12 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
               <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Sunday Service</p>
               <p className="text-navy-blue font-semibold text-sm">{church.time}</p>
             </div>
+            {church.bibleStudy && (
+              <div>
+                <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Bible Study</p>
+                <p className="text-navy-blue font-semibold text-sm">{church.bibleStudy}</p>
+              </div>
+            )}
             {church.sundaySchool && (
               <div>
                 <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Sunday School</p>

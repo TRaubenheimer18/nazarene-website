@@ -110,13 +110,7 @@ export default function Events() {
                   {/* Card body */}
                   <div className="p-6 flex flex-col gap-3 flex-1 bg-white">
 
-                    {/* Department pill */}
-                    <span
-                      className="self-start px-3 py-1 text-[9px] font-black uppercase tracking-[0.2em] text-white"
-                      style={{ backgroundColor: color }}
-                    >
-                      {dept}
-                    </span>
+                    
 
                     {/* Title */}
                     <h3

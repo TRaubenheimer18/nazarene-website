@@ -33,7 +33,7 @@ export const EVENTS = [
 
   // NYI
   { title: 'Sports Day', department: 'NYI', year: 2026, month: 4, day: 4 },
-  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, dayEnd: 29, time: '7:00 PM', location: 'Various Churches' },
+  { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 27, dayEnd: 29, time: '7:00 PM', location: 'Various Churches'},
   { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 28, time: '7:00 PM', location: 'Sunnyside Church of the Nazarene' },
   { title: 'Youth Week', department: 'NYI', year: 2026, month: 5, day: 29, time: '7:00 PM', location: 'Bonteheuwel Church of the Nazarene' },
   { title: 'Stay Awake', department: 'NYI', year: 2026, month: 6, day: 15 },
