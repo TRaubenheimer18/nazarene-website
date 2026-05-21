@@ -1,7 +1,7 @@
 export const DEPT_COLORS = {
   District:           { color: '#132c43' },
-  NMI:                { color: '#7c2938' },
-  NYI:                { color: '#00384D' },
+  NMI:                { color: '#ffffff' },
+  NYI:                { color: '#000000' },
   NDI:                { color: '#5a7a3a' },
   'Church Plant':     { color: '#7c5c2a' },
   'Campaign & Rally': { color: '#4a3060' },

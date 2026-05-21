@@ -1,6 +1,7 @@
 import { EVENTS, DEPT_COLORS } from '../data/events';
 import NYILogo from '../assets/NYI-logo.jpeg';
 import NazareneLogo from '../assets/Nazarene-logo.jpeg';
+import NMILogo from '../assets/NMI-logo.jpeg';
 
 const MONTH_NAMES = [
   'January','February','March','April','May','June',
@@ -85,14 +86,14 @@ export default function Events() {
                 >
                   {/* Image area */}
                   <div
-                    className="relative h-56 overflow-hidden flex items-end"
-                    style={{ backgroundColor: color }}
+                    className="relative overflow-hidden flex items-end"
+                    style={{ backgroundColor: color, aspectRatio: '389 / 315' }}
                   >
-                    {dept === 'NYI' || dept === 'District' || dept === 'Church Plant' || dept === 'Campaign & Rally' ? (
+                    {dept === 'NYI' || dept === 'NMI' || dept === 'District' || dept === 'Church Plant' || dept === 'Campaign & Rally' ? (
                       <img
-                        src={dept === 'NYI' ? NYILogo : NazareneLogo}
+                        src={dept === 'NYI' ? NYILogo : dept === 'NMI' ? NMILogo : NazareneLogo}
                         alt={dept}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                       />
                     ) : (
                       <>
