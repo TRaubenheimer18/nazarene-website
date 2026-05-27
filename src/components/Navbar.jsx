@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   // Effect to handle the "Floating" look when the user scrolls
@@ -82,12 +83,40 @@ export default function Navbar() {
           Get Involved
         </Link> */}
 
-        {/* Mobile Menu Icon Placeholder */}
-        <div className="lg:hidden">
-          <div className={`w-6 h-[2px] mb-1 ${isScrolled ? "bg-navy" : "bg-white"}`}></div>
-          <div className={`w-6 h-[2px] ${isScrolled ? "bg-navy" : "bg-white"}`}></div>
-        </div>
+        {/* Mobile Hamburger Button */}
+        <button className="lg:hidden flex flex-col justify-center gap-1.5" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className={`w-6 h-[2px] transition-all ${isScrolled ? "bg-navy" : "bg-white"} ${menuOpen ? "rotate-45 translate-y-2" : ""}`}></div>
+          <div className={`w-6 h-[2px] transition-all ${isScrolled ? "bg-navy" : "bg-white"} ${menuOpen ? "opacity-0" : ""}`}></div>
+          <div className={`w-6 h-[2px] transition-all ${isScrolled ? "bg-navy" : "bg-white"} ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}></div>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden max-w-7xl mx-auto bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl mt-2 px-6 py-4 flex flex-col gap-2">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Churches", path: "/churches" },
+            { name: "Ministries", path: "/ministries" },
+            { name: "Events", path: "/events" },
+            { name: "Calendar", path: "/calendar" },
+            { name: "College", path: "/college" },
+            { name: "Contact", path: "/contact" },
+          ].map((tab) => (
+            <Link
+              key={tab.name}
+              to={tab.path}
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-atlantic/10 ${
+                isActive(tab.path) ? "text-atlantic" : "text-navy hover:text-atlantic"
+              }`}
+            >
+              {tab.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
