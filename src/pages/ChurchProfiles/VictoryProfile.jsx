@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { churches } from '../../data/churches';
 import VictoryPastor from '../../assets/VictoryResources/VictoryPastor.jpeg';
 
+
 const church = churches.find(c => c.id === 'victory-nazarene');
 
 const historyPeriods = [
@@ -169,20 +170,22 @@ export default function VictoryProfile() {
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="pastor-bio-tabs mb-8">
             {bioSections.map((section, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveTab(i)}
-                className={`px-4 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-colors ${
-                  activeTab === i
-                    ? 'bg-navy-blue text-white'
-                    : 'bg-sand/30 text-atlantic border border-sand hover:bg-sand/60'
-                }`}
-              >
+              <label key={i}>
+                <input
+                  type="radio"
+                  name="victory-bio-tab"
+                  checked={activeTab === i}
+                  onChange={() => setActiveTab(i)}
+                />
                 {section.tab}
-              </button>
+              </label>
             ))}
+            <div
+              className="pastor-bio-tabs-selection"
+              style={{ width: `${100 / bioSections.length}%`, transform: `translateX(${activeTab * 100}%)` }}
+            />
           </div>
 
           {/* Tab Content */}

@@ -71,7 +71,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#FCFAF5] p-7 md:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 shadow-sm">
+            <div className="bg-white p-7 md:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 shadow-sm">
 
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-[2px] w-10 bg-atlantic"></div>

@@ -22,9 +22,33 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
           <div className="w-full h-full bg-atlantic/80" />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-navy-blue via-navy-blue/60 to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto">
-          <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">{church.area}</span>
-          <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">{church.name}</h1>
+        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto flex items-end justify-between">
+          <div>
+            <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">{church.area}</span>
+            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">{church.name}</h1>
+          </div>
+          {(church.facebook || church.tiktok) && (
+            <div className="flex gap-2 shrink-0">
+              {church.facebook && (
+                <a href={church.facebook} target="_blank" rel="noopener noreferrer"
+                  className="w-[38px] h-[38px] bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110"
+                  style={{transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)'}}>
+                  <svg viewBox="0 0 320 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                  </svg>
+                </a>
+              )}
+              {church.tiktok && (
+                <a href={church.tiktok} target="_blank" rel="noopener noreferrer"
+                  className="w-[38px] h-[38px] bg-black text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110"
+                  style={{transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)'}}>
+                  <svg viewBox="0 0 448 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.4A162.6,162.6,0,1,1,185.7,188V278.2a74.7,74.7,0,1,0,52.2,71.2V0h88.3a121.2,121.2,0,0,0,121.8,108.9Z"></path>
+                  </svg>
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -113,7 +137,7 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
         )}
 
         {/* Services & Times */}
-        <div>
+        {/* <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson" />
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Services & Times</span>
@@ -148,7 +172,7 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
               </div>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Outreach */}
         {church.outreach && (
@@ -161,37 +185,7 @@ export default function ChurchProfileLayout({ churchId, church: churchProp }) {
           </div>
         )}
 
-        {/* Connect */}
-        {(church.facebook || church.tiktok) && (
-          <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-[2px] w-10 bg-crimson" />
-              <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Connect</span>
-            </div>
-            <div className="flex gap-3">
-              {church.facebook && (
-                <a href={church.facebook} target="_blank" rel="noopener noreferrer"
-                  className="w-[38px] h-[38px] bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] cursor-pointer transition-all duration-200 hover:scale-110"
-                  style={{transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)'}}>
-                  <svg viewBox="0 0 320 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                  </svg>
-                </a>
-              )}
-              {church.tiktok && (
-                <a href={church.tiktok} target="_blank" rel="noopener noreferrer"
-                  className="w-[38px] h-[38px] bg-black text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] cursor-pointer transition-all duration-200 hover:scale-110"
-                  style={{transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)'}}>
-                  <svg viewBox="0 0 448 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.4A162.6,162.6,0,1,1,185.7,188V278.2a74.7,74.7,0,1,0,52.2,71.2V0h88.3a121.2,121.2,0,0,0,121.8,108.9Z"></path>
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
-        )}
-
-        <Link to="/churches" className="inline-flex items-center gap-2 text-atlantic font-bold text-sm hover:text-crimson transition-colors">
+<Link to="/churches" className="inline-flex items-center gap-2 text-atlantic font-bold text-sm hover:text-crimson transition-colors">
           ← Back to all Churches
         </Link>
       </div>

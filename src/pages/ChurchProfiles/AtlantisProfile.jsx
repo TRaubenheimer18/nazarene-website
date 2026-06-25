@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AtlantisPastor from '../../assets/AtlantisResources/AtlantisPastor.jpeg';
 
+
 const historyPeriods = [
   {
     period: '1976–1981',
@@ -99,11 +100,30 @@ export default function AtlantisProfile() {
       <div className="relative h-72 bg-navy-blue overflow-hidden">
         <img src={require('../../assets/Atlantis COTN.jpeg')} alt="Atlantis COTN" className="w-full h-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-blue via-navy-blue/60 to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto">
-          <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">Atlantis, Cape Town</span>
-          <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">Church of the Nazarene Atlantis</h1>
+        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto flex items-end justify-between">
+          <div>
+            <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">Atlantis, Cape Town</span>
+            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">Church of the Nazarene Atlantis</h1>
+          </div>
         </div>
       </div>
+
+      {/* <div className="flex justify-end gap-2 max-w-5xl mx-auto px-6 pt-3">
+            <a href="https://www.facebook.com/Church-of-the-Nazarene-Atlantis" target="_blank" rel="noopener noreferrer"
+              className="w-[38px] h-[38px] bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110"
+              style={{ transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)' }}>
+              <svg viewBox="0 0 320 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@churchofthenazareneatl" target="_blank" rel="noopener noreferrer"
+              className="w-[38px] h-[38px] bg-black text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110"
+              style={{ transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)' }}>
+              <svg viewBox="0 0 448 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.4A162.6,162.6,0,1,1,185.7,188V278.2a74.7,74.7,0,1,0,52.2,71.2V0h88.3a121.2,121.2,0,0,0,121.8,108.9Z"></path>
+              </svg>
+            </a>
+          </div> */}
 
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
 
@@ -167,21 +187,47 @@ export default function AtlantisProfile() {
 
         {/* Local Pastors */}
         <div>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-[2px] w-10 bg-crimson" />
-            <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Local Pastors</span>
+  {/* Section Header with Refined Spacing */}
+  <div className="flex items-center gap-4 mb-12">
+    <div className="h-[1px] w-12 bg-crimson" />
+    <span className="text-[10px] font-black text-navy uppercase tracking-[0.5em]">
+      Local Pastors
+    </span>
+  </div>
+
+  {/* Professional Editorial Grid */}
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16">
+    {localPastors.map((pastor, i) => (
+      <div key={i} className="group flex flex-col space-y-5">
+        
+        {/* Modern Portrait Frame */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] bg-[#FCFAF5] border border-sand/50 shadow-sm transition-all duration-700 group-hover:shadow-2xl group-hover:shadow-navy/5 group-hover:-translate-y-2">
+          {/* Decorative Overlay */}
+          <div className="absolute inset-0 bg-navy/5 mix-blend-multiply transition-opacity group-hover:opacity-0" />
+          
+          {/* Placeholder/Photo Area */}
+          <div className="flex h-full w-full items-center justify-center">
+            <span className="text-[9px] font-black uppercase tracking-[0.4em] text-fynbos/30 italic">
+              Portrait
+            </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {localPastors.map((pastor, i) => (
-              <div key={i} className="flex flex-col items-center text-center gap-3">
-                <div className="w-full aspect-[5/3] bg-sand/40 border-2 border-sand flex items-center justify-center text-slate-400 text-xs font-black uppercase tracking-widest">
-                  Photo
-                </div>
-                <p className="text-sm font-bold text-navy-blue leading-tight">{pastor.name}</p>
-              </div>
-            ))}
+
+          {/* Subtle Corner Detail */}
+          <div className="absolute bottom-4 right-4 h-6 w-6 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="text-navy text-[10px]">+</span>
           </div>
         </div>
+
+        {/* Minimalist Identity Block */}
+        <div className="px-2">
+          <h4 className="text-sm font-black text-navy tracking-tighter leading-none mb-1 group-hover:text-sunset transition-colors">
+            {pastor.name}
+          </h4>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Pastor's Biography */}
         <div>
@@ -191,20 +237,22 @@ export default function AtlantisProfile() {
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="pastor-bio-tabs mb-8">
             {bioSections.map((section, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveTab(i)}
-                className={`px-4 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-colors ${
-                  activeTab === i
-                    ? 'bg-navy-blue text-white'
-                    : 'bg-sand/30 text-atlantic border border-sand hover:bg-sand/60'
-                }`}
-              >
+              <label key={i}>
+                <input
+                  type="radio"
+                  name="atlantis-bio-tab"
+                  checked={activeTab === i}
+                  onChange={() => setActiveTab(i)}
+                />
                 {section.tab}
-              </button>
+              </label>
             ))}
+            <div
+              className="pastor-bio-tabs-selection"
+              style={{ width: `${100 / bioSections.length}%`, transform: `translateX(${activeTab * 100}%)` }}
+            />
           </div>
 
           {/* Tab Content */}
@@ -228,36 +276,6 @@ export default function AtlantisProfile() {
           </div>
         </div>
 
-        {/* Services & Times */}
-        <div>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-[2px] w-10 bg-crimson" />
-            <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Services & Times</span>
-          </div>
-          <div className="space-y-3">
-            <div>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Sunday Service</p>
-              <p className="text-navy-blue font-semibold text-sm">09:30 AM</p>
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Sunday School</p>
-              <p className="text-navy-blue font-semibold text-sm">08:30 AM</p>
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Youth Service</p>
-              <p className="text-navy-blue font-semibold text-sm">Friday at 18:30</p>
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Bible Study</p>
-              <p className="text-navy-blue font-semibold text-sm">Wednesday at 18:30</p>
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Online Service</p>
-              <p className="text-navy-blue font-semibold text-sm">Yes</p>
-            </div>
-          </div>
-        </div>
-
         {/* Outreach */}
         <div>
           <div className="flex items-center gap-4 mb-6">
@@ -265,30 +283,6 @@ export default function AtlantisProfile() {
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Outreach Ministries</span>
           </div>
           <p className="text-slate-600 text-sm leading-relaxed">NMI, Evangelistic Ministry, Prison Ministry</p>
-        </div>
-
-        {/* Connect */}
-        <div>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-[2px] w-10 bg-crimson" />
-            <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Connect</span>
-          </div>
-          <div className="flex gap-3">
-            <a href="https://www.facebook.com/Church-of-the-Nazarene-Atlantis" target="_blank" rel="noopener noreferrer"
-              className="w-[38px] h-[38px] bg-[#1877f2] text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] cursor-pointer transition-all duration-200 hover:scale-110"
-              style={{ transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)' }}>
-              <svg viewBox="0 0 320 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/@churchofthenazareneatl" target="_blank" rel="noopener noreferrer"
-              className="w-[38px] h-[38px] bg-black text-white rounded-full flex items-center justify-center shadow-[0_10px_10px_rgba(0,0,0,0.1)] cursor-pointer transition-all duration-200 hover:scale-110"
-              style={{ transition: 'all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55)' }}>
-              <svg viewBox="0 0 448 512" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.4A162.6,162.6,0,1,1,185.7,188V278.2a74.7,74.7,0,1,0,52.2,71.2V0h88.3a121.2,121.2,0,0,0,121.8,108.9Z"></path>
-              </svg>
-            </a>
-          </div>
         </div>
 
         <Link to="/churches" className="inline-flex items-center gap-2 text-atlantic font-bold text-sm hover:text-crimson transition-colors">

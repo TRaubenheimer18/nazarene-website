@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pastor-bio-tabs input {
+  display: none;
+}
+
+.pastor-bio-tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #132c43;
+  overflow: hidden;
+  width: 100%;
+}
+
+.pastor-bio-tabs label {
+  flex: 1;
+  padding: 10px 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00384D;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.pastor-bio-tabs-selection {
+  position: absolute;
+  height: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: transform 0.15s ease;
+  background-color: #132c43;
+  display: none;
+}
+
+.pastor-bio-tabs label:has(input:checked) {
+  color: #fff;
+}
+
+.pastor-bio-tabs label:has(input:checked) ~ .pastor-bio-tabs-selection {
+  display: block;
+}

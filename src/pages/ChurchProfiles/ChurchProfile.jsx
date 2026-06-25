@@ -58,13 +58,13 @@ export default function ChurchProfile() {
         </div>
 
         {/* Services */}
-        <div>
+        {/* <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10 bg-crimson" />
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Services & Times</span>
           </div>
           <p className="text-slate-400 italic text-sm">No additional service times added yet.</p>
-        </div>
+        </div> */}
 
         {/* Contact */}
         <div>
