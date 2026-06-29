@@ -1,11 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import CapeTownImg from '../assets/cape-town.jpg';
 import Image2 from '../assets/image2.jpg';
 import Image4 from '../assets/image4.jpg';
 import VisionMap from '../assets/vision map.jpeg';
 
 export default function Home() {
+  const { pathname } = useLocation();
+  const [churchCount, setChurchCount] = useState(0);
+
+  useEffect(() => {
+    setChurchCount(0);
+    const target = 40;
+    const duration = 2000;
+    const step = Math.ceil(duration / target);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += 1;
+      setChurchCount(current);
+      if (current >= target) clearInterval(timer);
+    }, step);
+    return () => clearInterval(timer);
+  }, [pathname]);
+
   return (
     <div className="bg-white min-h-screen selection:bg-atlantic/30">
       
@@ -57,7 +74,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-6 -mt-12 relative z-20">
         <div className="bg-white rounded-3xl shadow-2xl shadow-navy/10 border border-slate-100 p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { label: 'Churches', val: '40', color: 'text-atlantic' },
+            { label: 'Churches', val: churchCount, color: 'text-atlantic' },
             { label: 'District', val: '1', color: 'text-crimson' },
             { label: 'Members', val: '5k+', color: 'text-fynbos' },
             { label: 'Commitment', val: '100%', color: 'text-crimson' }

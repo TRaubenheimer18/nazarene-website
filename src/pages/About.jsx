@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import Img1 from '../assets/image1.jpg';
 
 export default function About() {
   const { hash } = useLocation();
@@ -62,46 +61,28 @@ export default function About() {
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Our Calling</span>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
-
-            <div className="space-y-10">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter leading-tight mb-6">
-                  Empowering Pastors. <br />
-                  <span className="text-fynbos">Transforming Lives.</span>
-                </h2>
-                <p className="text-slate-500 text-lg font-light leading-relaxed">
-                  We exist as a resource and support network for our local congregations —
-                  empowering pastors, developing leaders, and planting new churches that
-                  reflect the holiness and love of Jesus Christ across the Western Cape.
-                </p>
-              </div>
-
-              <div className="relative bg-white rounded-[1.5rem] p-7 overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-crimson rounded-l-[1.5rem]"></div>
-                <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-3">The Vision</p>
-                <p className="text-slate-500 font-serif italic text-base leading-relaxed">
-                  &ldquo;To see a vibrant, holiness-centered Nazarene presence in every town
-                  of the Western Cape, bringing hope to the broken and light to the dark.&rdquo;
-                </p>
-              </div>
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-black text-navy-blue tracking-tighter leading-tight mb-6">
+                Empowering Pastors. <br />
+                <span className="text-fynbos">Transforming Lives.</span>
+              </h2>
             </div>
-
-            <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-64 md:h-[480px] shadow-2xl shadow-navy/20">
-              <img src={Img1} alt="Western Cape" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
-              {/* <div className="absolute bottom-8 left-8 right-8 grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20">
-                  <span className="text-4xl font-black text-white">40</span>
-                  <p className="text-[10px] font-black text-sand/70 uppercase tracking-widest mt-1">Congregations</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20">
-                  <span className="text-4xl font-black text-white">5k+</span>
-                  <p className="text-[10px] font-black text-sand/70 uppercase tracking-widest mt-1">Members</p>
-                </div>
-              </div> */}
+            <div>
+              <p className="text-slate-500 text-lg font-light leading-relaxed">
+                We exist as a resource and support network for our local congregations —
+                empowering pastors, developing leaders, and planting new churches that
+                reflect the holiness and love of Jesus Christ across the Western Cape.
+              </p>
             </div>
+          </div>
 
+          <div className="relative bg-[#FCFAF5] rounded-[1.5rem] p-8 md:p-10 overflow-hidden border border-slate-100">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-crimson rounded-l-[1.5rem]"></div>
+            <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-4">The Vision</p>
+            <p className="text-slate-500 font-serif italic text-lg md:text-xl leading-relaxed max-w-3xl">
+              &ldquo;To see a vibrant, holiness-centered Nazarene presence in every town of the Western Cape, bringing hope to the broken and light to the dark.&rdquo;
+            </p>
           </div>
         </div>
       </section>

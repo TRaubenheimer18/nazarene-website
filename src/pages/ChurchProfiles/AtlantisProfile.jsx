@@ -164,6 +164,53 @@ export default function AtlantisProfile() {
           </div>
         </div>
 
+              {/* Pastor's Biography */}
+        <div>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-[2px] w-10 bg-crimson" />
+            <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Pastor's Biography</span>
+          </div>
+
+          {/* Tabs */}
+          <div className="pastor-bio-tabs mb-8">
+            {bioSections.map((section, i) => (
+              <label key={i}>
+                <input
+                  type="radio"
+                  name="atlantis-bio-tab"
+                  checked={activeTab === i}
+                  onChange={() => setActiveTab(i)}
+                />
+                {section.tab}
+              </label>
+            ))}
+            <div
+              className="pastor-bio-tabs-selection"
+              style={{ width: `${100 / bioSections.length}%`, transform: `translateX(${activeTab * 100}%)` }}
+            />
+          </div>
+
+          {/* Tab Content */}
+          <div className="space-y-8">
+            {bioSections[activeTab].content.map((item, i) => (
+              <div key={i}>
+                <h4 className="text-base font-black text-navy-blue tracking-tight mb-3">{item.heading}</h4>
+                {item.body && <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>}
+                {item.list && (
+                  <ul className="space-y-2">
+                    {item.list.map((point, j) => (
+                      <li key={j} className="flex items-start gap-3 text-slate-600 text-sm">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-crimson shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* History */}
         <div>
           <div className="flex items-center gap-4 mb-8">
@@ -229,52 +276,7 @@ export default function AtlantisProfile() {
   </div>
 </div>
 
-        {/* Pastor's Biography */}
-        <div>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-[2px] w-10 bg-crimson" />
-            <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Pastor's Biography</span>
-          </div>
-
-          {/* Tabs */}
-          <div className="pastor-bio-tabs mb-8">
-            {bioSections.map((section, i) => (
-              <label key={i}>
-                <input
-                  type="radio"
-                  name="atlantis-bio-tab"
-                  checked={activeTab === i}
-                  onChange={() => setActiveTab(i)}
-                />
-                {section.tab}
-              </label>
-            ))}
-            <div
-              className="pastor-bio-tabs-selection"
-              style={{ width: `${100 / bioSections.length}%`, transform: `translateX(${activeTab * 100}%)` }}
-            />
-          </div>
-
-          {/* Tab Content */}
-          <div className="space-y-8">
-            {bioSections[activeTab].content.map((item, i) => (
-              <div key={i}>
-                <h4 className="text-base font-black text-navy-blue tracking-tight mb-3">{item.heading}</h4>
-                {item.body && <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>}
-                {item.list && (
-                  <ul className="space-y-2">
-                    {item.list.map((point, j) => (
-                      <li key={j} className="flex items-start gap-3 text-slate-600 text-sm">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-crimson shrink-0" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+  
 
         {/* Outreach */}
         <div>
