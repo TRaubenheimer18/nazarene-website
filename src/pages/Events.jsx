@@ -1,4 +1,5 @@
 import { EVENTS, DEPT_COLORS } from '../data/events';
+import EventsImage from '../assets/EventsImage.jpeg';
 import NYILogo from '../assets/NYI-logo.jpeg';
 import NazareneLogo from '../assets/Nazarene-logo.jpeg';
 import NMILogo from '../assets/NMI-logo.jpeg';
@@ -40,20 +41,23 @@ export default function Events() {
     <div className="bg-white min-h-screen">
 
       {/* Hero */}
-      <div className="pt-32 pb-16 px-6" style={{ backgroundColor: '#132c43' }}>
-        <div className="max-w-6xl mx-auto">
-          <span
-            className="text-[10px] font-black uppercase tracking-[0.4em]"
-            style={{ color: 'rgba(242,232,207,0.6)' }}
-          >
-            Western Cape District
-          </span>
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mt-2">
-            Events
-          </h1>
-          <p className="text-white/50 font-light mt-4 max-w-xl leading-relaxed text-sm">
-            Upcoming events across all departments of the Western Cape District Church of the Nazarene.
-          </p>
+      <div className="relative overflow-hidden">
+        <img src={EventsImage} alt="Events" className="w-full h-[50vh] object-cover" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/75 via-black/40 to-transparent flex items-end pb-8 px-6">
+          <div className="max-w-6xl mx-auto w-full">
+            <span
+              className="text-[10px] font-black uppercase tracking-[0.4em]"
+              style={{ color: 'rgba(242,232,207,0.6)' }}
+            >
+              Western Cape District
+            </span>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mt-2">
+              Events
+            </h1>
+            <p className="text-white/70 font-light mt-2 max-w-xl leading-relaxed text-sm">
+              Upcoming events across all departments of the Western Cape District Church of the Nazarene.
+            </p>
+          </div>
         </div>
       </div>
 

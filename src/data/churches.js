@@ -306,6 +306,7 @@ export const churches = [
     pastor: "Vincent Jonkers",
     time: "10:00 AM",
     address: "Cnr Pittesporum & Evans Street, Klein Nederberg, Paarl",
+    pastorImage: require('../assets/PaarlResources/PaarlPastor.jpeg'),
     // image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=60&w=800"
   },
   { 
@@ -354,6 +355,7 @@ export const churches = [
     area: "Steenberg", 
     pastor: "Quinton Williams",
     time: "10:00 AM",
+    pastorImage: require('../assets/SteenbergResources/SteenbergPastor.jpeg'),
     // image: "https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?auto=format&fit=crop&q=60&w=800"
   },
   { 
