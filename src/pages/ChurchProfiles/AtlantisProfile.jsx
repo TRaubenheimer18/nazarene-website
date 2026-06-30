@@ -148,7 +148,7 @@ export default function AtlantisProfile() {
             <div className="h-[2px] w-10 bg-crimson" />
             <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Pastor of the Church</span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 bg-sand/20 rounded-[2rem] p-8 border border-sand">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 bg-white rounded-[2rem] p-8 border">
             <img
               src={AtlantisPastor}
               alt="Nigel Kolkoto"
