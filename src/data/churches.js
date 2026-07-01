@@ -1,404 +1,459 @@
 export const churches = [
-  { 
-    id: "atlantis-nazarene", 
-    name: "Atlantis Church of the Nazarene ", 
-    area: "Atlantis, Cape Town", 
-    pastor: "Nigel Kolkoto",
-    time: "09:30 AM",
+  {
+    id: "atlantis-nazarene",
+    name: "Atlantis Church of the Nazarene",
+    area: "Atlantis, Cape Town",
+    pastor: "Rev. Nigel J. Kolkoto",
     address: "43 Berzelia St, Protea Park, Cape Town, 7349",
-    youthService: "Friday at 18:30",
     sundaySchool: "Sunday at 08:30",
     bibleStudy: "Wednesday at 19:00",
+    youthService: "Friday at 18:30",
     facebook: "https://www.facebook.com/Church-of-the-Nazarene-Atlantis",
     tiktok: "https://www.tiktok.com/@churchofthenazareneatl",
-    onlineService: true,
     outreach: "NMI, Evangelistic Ministry, Prison Ministry",
-    image: require('../assets/Atlantis COTN.jpeg') 
+    image: require('../assets/Atlantis COTN.jpeg'),
+    pastorImage: require('../assets/AtlantisResources/AtlantisPastor.jpeg'),
+    pastorBio: "Rev. Nigel J. Kolkoto has served as Senior Pastor of Atlantis Church of the Nazarene for 17 years, leading the congregation with a heart for holiness, evangelism, and community transformation.",
+    bioSections: [
+      {
+        tab: 'Background',
+        content: [
+          { heading: 'Personal Background', body: 'Rev. Nigel J. Kolkoto was born in Bishop Lavis and raised in Cape Town. His upbringing laid a foundation of faith and community that would shape his character and eventual calling into ministry.' },
+          { heading: 'Key Life Experiences', body: 'The experiences of his early life in Cape Town gave him a deep understanding of the communities he now serves. These formative years cultivated in him a pastoral heart and a genuine compassion for people from all walks of life.' },
+        ],
+      },
+      {
+        tab: 'Calling',
+        content: [
+          { heading: 'Spiritual Journey', body: 'Rev. Kolkoto gave his life to Christ in 2000. His journey of faith was shaped by the guidance of Rev. Gene Pretorius and Rev. Matthew Simeon, who mentored him during the early years of his walk with God.' },
+          { heading: 'Confirmation of the Call', body: 'He felt called into ministry in 2000. The call was confirmed through his mentors and his growing conviction to serve the local church. That calling has remained the driving force behind 17 years of faithful ministry.' },
+        ],
+      },
+      {
+        tab: 'Education',
+        content: [
+          {
+            heading: 'Qualifications',
+            list: ['Theology — Nazarene Theological College (NTC)'],
+          },
+        ],
+      },
+      {
+        tab: 'Ministry',
+        content: [
+          {
+            heading: 'Roles Served',
+            list: [
+              "Minister's License — Belhar Church of the Nazarene",
+              'Pastor — Northpine Church of the Nazarene',
+              'Senior Pastor — Atlantis Church of the Nazarene (Current)',
+            ],
+          },
+          { heading: 'Ministry Impact', body: 'Over 17 years of ministry, Rev. Kolkoto has led the Atlantis congregation with a commitment to evangelism, outreach, and community development. Under his leadership, the church has maintained active ministries in NMI, evangelism, and prison ministry.' },
+        ],
+      },
+      {
+        tab: 'Vision',
+        content: [
+          { heading: 'Leadership Style', body: 'Rev. Kolkoto leads by example and through positive influence. His approach to mentoring is grounded in the belief that you walk the journey with others that was once walked with you.' },
+          { heading: 'Goals & Trust', body: 'His vision for the future is one of trust — to trust God for the now and to remain ready for wherever He leads. He does not chase a fixed plan but remains open and obedient to the leading of the Holy Spirit.' },
+          { heading: 'Life Scripture', body: 'Proverbs 3:5–6 — "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."' },
+          { heading: 'Legacy', body: 'Rev. Kolkoto hopes to be remembered as a person who loved God and loved others. His personal motto: "Walk faithfully with God today, not because the path is easy, but because His presence makes every step meaningful."' },
+        ],
+      },
+    ],
+    historyPeriods: [
+      {
+        period: '1976–1981',
+        title: 'Establishment',
+        content: [
+          'The church was established in 1976 by the missionary Rev. Emsly. When Ma Vlotman later relocated to Atlantis, Rev. Emsly spent approximately three months actively ministering and working in the Atlantis area. During this initial phase, church activities were conducted from a private home owned by the Van Zyl couple, who resided in Chandor Street, Atlantis.',
+          'After the Van Zyl couple, responsibility for the work was taken over by the Emsly family. However, due to advancing age, the Emslys eventually withdrew from active ministry, and the Stiegleader missionary couple assumed leadership of the church. During their tenure, services were relocated to the home of Ma Vlotman at 14 Meteren Street, Avondale.',
+          'Following the departure of the Stiegleader couple, Rev. William Bantom took oversight of the congregation. Sunday morning services continued to be held at the Vlotman residence, and worship gatherings remained there for approximately six years.',
+          'The first officially appointed pastor of the church was Rev. Nugent Galant, who served while the congregation was still meeting at the Vlotman home. During this time, the church experienced steady growth, particularly as members of the Church of the Nazarene relocated to Atlantis. In addition, a wayside Sunday school ministry was conducted by Ma Vlotman at Eagles Nest in Dura.',
+        ],
+      },
+      {
+        period: '1981 onwards',
+        title: 'Expansion and Relocation',
+        content: [
+          'In 1981, due to the growth of the congregation, the church relocated to a classroom at No. 1 Secondary School, where services were held for approximately three to four years. In 1985, the congregation moved again, this time to Berzelia Primary School. During this period, the church experienced rapid growth.',
+          'The congregation continued meeting at Berzelia Primary School until the church building was completed in 1986. A significant milestone in the life of the church occurred in 1988, when the first wedding was conducted in the church building, celebrating the marriage of Ma Vlotman\'s daughter.',
+          'Rev. Collip served as the second pastor of the church and was responsible for fencing the church grounds. Over the years, several other pastors have served the congregation, including Rev. Cousins, Rev. Slinger, Rev. Wesso, Rev. Sallies, Rev. Karelse, Rev. Fransuzane, Rev. Ramedies, Rev. Rustin, and Rev. Kolkoto. These names are not recorded in chronological order.',
+        ],
+      },
+    ],
+    localPastors: [
+      { name: 'Ashley Slinger' },
+      { name: 'Bevan Brown' },
+      { name: 'Cedrick Arendse' },
+      { name: 'Donovan De Villiers' },
+      { name: 'Graeme Daniels' },
+      { name: 'Hetley Pietersen' },
+      { name: 'Ivan Hendricks' },
+      { name: 'Jenine Charles' },
+      { name: 'Jessica Daniels' },
+      { name: 'Martin De Villiers' },
+      { name: 'Marvin-Jacob Cornelissen' },
+    ],
   },
-  { 
-    id: "belhar-nazarene", 
-    name: "Belhar Church of the Nazarene", 
-    area: "Belhar", 
+  {
+    id: "belhar-nazarene",
+    name: "Belhar Church of the Nazarene",
+    area: "Belhar",
     pastor: "Matthew Simeon",
-    time: "10:00 AM",
-    image: require('../assets/Belhar COTN.jpeg')
+    image: require('../assets/Belhar COTN.jpeg'),
   },
-  { 
-    id: "bethany-nazarene", 
-    name: "Bethany Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "bethany-nazarene",
+    name: "Bethany Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Reginald Subjee",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1510590333219-d7d000118aae?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "bishop-lavis-nazarene", 
-    name: "Bishop Lavis Church of the Nazarene", 
-    area: "Bishop Lavis", 
+  {
+    id: "bishop-lavis-nazarene",
+    name: "Bishop Lavis Church of the Nazarene",
+    area: "Bishop Lavis",
     pastor: "Jeremiah Siljeur",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "bluedowns-nazarene", 
-    name: "Bluedowns Church of the Nazarene", 
-    area: "Blue Downs", 
-    pastor: "Harold Jansen",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&q=60&w=800"
+  {
+    id: "bluedowns-nazarene",
+    name: "Bluedowns Church of the Nazarene",
+    area: "Blue Downs",
+    pastor: "Rev. Harold W. Jansen",
+    image: require('../assets/BluedownsResources/BluedownsCOTN.jpeg'),
+    pastorImage: require('../assets/BluedownsResources/BludownsPastor.jpeg'),
+    pastorBio: "Rev. Harold W. Jansen has served as Senior Pastor of Blue Downs Church of the Nazarene since 2005. He is a servant leader committed to building a community where people are free to worship and experience the love of Christ.",
+    bioSections: [
+      {
+        tab: 'Background',
+        content: [
+          { heading: 'Personal Background', body: 'Rev. Harold W. Jansen was born and raised in Bridgetown. He is one of eleven children and accepted the Lord at a cottage meeting at the age of 23. He married Bianca Matthews on 30 September 2000 and they have four daughters: Tamar, twins Keziah and Keren, and their youngest Leah.' },
+          { heading: 'Key Life Experiences', body: 'His conversion was a turnaround experience in his life. His marriage shaped and changed him deeply, as did the birth of his first daughter. These milestones continue to anchor his faith and ministry.' },
+        ],
+      },
+      {
+        tab: 'Calling',
+        content: [
+          { heading: 'Spiritual Journey', body: 'Rev. Jansen gave his life to Christ in 1991, accepting Jesus as Lord and Saviour. He felt called into ministry in 1992 and registered at NTC College in 1995. After returning home due to unforeseen circumstances, the call came again in his first year of marriage. He returned to NTC in 2002 and graduated as valedictorian.' },
+          { heading: 'Confirmation of the Call', body: "God's answers to various prayers confirmed his calling. Further confirmation came through fellow believers at Sunnyside Church of the Nazarene." },
+        ],
+      },
+      {
+        tab: 'Education',
+        content: [
+          {
+            heading: 'Qualifications',
+            list: [
+              'Certificate in Engineering — NTC 1, NTC 2, NTC 3 (Trade Tested 1990)',
+              'Diploma in Theology — Nazarene Theological College, Muldersdrift (2004)',
+              'BA Honours in Theology — University of the Western Cape (2022)',
+            ],
+          },
+        ],
+      },
+      {
+        tab: 'Ministry',
+        content: [
+          {
+            heading: 'Roles Served',
+            list: [
+              'SRC Representative — Nazarene Theological College',
+              'First Pastorate — Factreton Church of the Nazarene',
+              'MET Lecturer — NTC Western Cape Satellite Centre',
+              'Member of the District Board of Ministry (2021–2025)',
+              'Senior Pastor — Blue Downs Church of the Nazarene (Current)',
+            ],
+          },
+          { heading: 'Ministry Impact', body: 'Rev. Jansen has made a significant impact through teaching MET classes that prepared students for ministry at the NTC Western Cape Satellite Centre. He has also served as Vice Chairperson and Chairperson at Excelsior High School, extending his influence into the broader community.' },
+        ],
+      },
+      {
+        tab: 'Vision',
+        content: [
+          { heading: 'Leadership Style', body: 'Rev. Jansen leads by example with servant leadership, humility, and understanding. His key scripture is John 13:34 — "A new commandment I give you, that you love one another as I have loved you."' },
+          { heading: 'Mentoring', body: 'Mentoring in the pastorate is an imperative to Rev. Jansen, because it works both ways — it challenges the mentor as he imparts valuable experience and knowledge, while encouraging and offering stability to the mentee.' },
+          { heading: 'Vision for the Church', body: 'To build a place where people are free to worship the Lord in communion with one another, experience the love of Christ through believers, and where Jesus Christ is exalted among them.' },
+          { heading: 'Goals', body: 'To enter full-time ministry within the next five years. His life scripture is Psalm 90:12 — "Teach me to number my days, that I may gain a heart of wisdom."' },
+          { heading: 'Legacy', body: 'To be found faithful to Christ and His Church. His motto: "Live every day to your full potential — live a life of no regret." And a fun fact: he is still very much in love with his wife.' },
+        ],
+      },
+    ],
   },
-  { 
-    id: "bonteheuwel-nazarene", 
-    name: "Bonteheuwel Church of the Nazarene", 
-    area: "Bonteheuwel", 
+  {
+    id: "bonteheuwel-nazarene",
+    name: "Bonteheuwel Church of the Nazarene",
+    area: "Bonteheuwel",
     pastor: "Donovan Ramedies",
-    time: "10:00 AM",
     address: "210 Bonteheuwel Ave, Bonteheuwel, 7764",
-    youthService: "Friday at 6pm",
-    sundaySchool: "Sundays at 9am",
-    onlineService: false,
+    sundaySchool: "Sunday at 09:00",
+    bibleStudy: "Wednesday at 19:00",
+    youthService: "Friday at 18:00",
     outreach: "Cottage meetings and open air service; house visitation",
     history: "The church was started in 1968 and the focus has always been growing from outside in. Youth, Sunday School and Missionary ministries have always been a priority.",
     pastorBio: "The Pastor is an Elder in the church for 44 years, currently completing his Honours in Theology.",
-    // image: "https://images.unsplash.com/photo-1548625313-040e92152fa2?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "capricorn-nazarene", 
-    name: "Capricorn Church of the Nazarene", 
-    area: "Capricorn", 
+  {
+    id: "capricorn-nazarene",
+    name: "Capricorn Church of the Nazarene",
+    area: "Capricorn",
     pastor: "Bernard Daniels",
-    time: "09:00 AM",
     address: "106 Harmony Road, Capricorn",
-    youthService: "Friday at 19:00",
     sundaySchool: "Sunday at 15:00",
-    onlineService: false,
+    youthService: "Friday at 19:00",
     outreach: "Cottage meetings, Wayside Sunday School",
     history: "Church was organized in 2007 by the then DS Patrick Paulse, pastored by Pastor Bernard Daniels. Originally located at Faranaza's Edu-Care Center, Vrygrond Avenue. The church currently has its own property at 106 Harmony Road.",
     pastorBio: "Rev. Bernard Daniels — Ordained Elder. Wife: Audrey Daniels. Two adult children: Darian and Chanelle. Worked for the City of Cape Town (retired). Ministered at Capricorn while maintaining secular work. Active in all spheres of ministry and committed to the work of the Lord.",
-    // image: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "chatsworth-nazarene", 
-    name: "Chatsworth Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "chatsworth-nazarene",
+    name: "Chatsworth Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Ivan Hendricks",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "covenant-nazarene", 
-    name: "Covenant Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "covenant-nazarene",
+    name: "Covenant Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Bob Naidoo",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "delft-nazarene", 
-    name: "Delft Church of the Nazarene", 
-    area: "Delft", 
+  {
+    id: "delft-nazarene",
+    name: "Delft Church of the Nazarene",
+    area: "Delft",
     pastor: "Ferdie Hanekam",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "eastridge-nazarene", 
-    name: "Eastridge Church of the Nazarene", 
-    area: "Mitchells Plain", 
+  {
+    id: "eastridge-nazarene",
+    name: "Eastridge Church of the Nazarene",
+    area: "Mitchells Plain",
     pastor: "Howard Mitchell",
-    time: "09:00 AM",
     address: "3 Lohengrin, Eastridge, Mitchells Plain",
     sundaySchool: "Sunday at 09:00",
     facebook: "https://www.facebook.com/eastridgechurchofthenazarine",
-    onlineService: false,
     history: "Eastridge Church of the Nazarene has been an established congregation since 1983, originally founded as Beacon Valley Church of the Nazarene. In 2005, the congregation purchased property in Eastridge and was renamed accordingly. Rooted in the Wesleyan-Holiness movement, the church emphasises salvation, entire sanctification, and a life of holiness.",
     pastorBio: "Assistant Pastor at Bethany COTN 2008–2012; Senior Pastor at Eastridge COTN from 2013 to present.",
-    // image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "ebenezer-nazarene", 
-    name: "Ebenezer Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "ebenezer-nazarene",
+    name: "Ebenezer Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Nugent Gallant",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "elshaddai-nazarene", 
-    name: "El Shaddai Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "elshaddai-nazarene",
+    name: "El Shaddai Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Eldrid Smith",
-    time: "10:00 AM",
     address: "3 Sonnemeisie Str, De Kuilen, Kuils River",
-    // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "factreton-nazarene", 
-    name: "Factreton Church of the Nazarene", 
-    area: "Factreton", 
+  {
+    id: "factreton-nazarene",
+    name: "Factreton Church of the Nazarene",
+    area: "Factreton",
     pastor: "Reginald Subjee",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "grace-nazarene", 
-    name: "Grace Family Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "grace-nazarene",
+    name: "Grace Family Church of the Nazarene",
+    area: "Tafelsig, Cape Town",
     pastor: "William Bantom",
-    time: "09:00 AM",
     address: "1 Oranjekloof, Tafelsig",
+    sundaySchool: "Sunday at 09:00",
     youthService: "Friday at 19:00",
-    sundaySchool: "Sunday morning at 09:00",
-    onlineService: false,
     outreach: "NMI",
     pastorBio: "Senior Pastor: Rev. William David Bantom. Associate Pastor: Rev. Garvin Arendorf.",
-    // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "greenpastures-nazarene", 
-    name: "Green Pastures Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "greenpastures-nazarene",
+    name: "Green Pastures Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Fluen Martin",
-    time: "09:00 AM",
-    // image: "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "groenheuwel-nazarene", 
-    name: "Groenheuwel Church of the Nazarene", 
-    area: "Paarl", 
+  {
+    id: "groenheuwel-nazarene",
+    name: "Groenheuwel Church of the Nazarene",
+    area: "Paarl",
     pastor: "Esra Maralack",
-    time: "07:00 AM",
     address: "4 Calendula Street, Groenheuwel, Paarl, 7646",
-    youthService: "Fridays at 18:00",
     sundaySchool: "Sunday at 09:00",
-    onlineService: false,
+    youthService: "Fridays at 18:00",
     outreach: "Open Airs, Door to door, Wayside Sunday School at 15:00",
     history: "The church started on the porch of Sister Heffenaar 26 years ago, then moved to Brother Jan's yard in a Wendy house in 2001, which remains the place of worship. Members came and left over the years, but the core of the Groenheuwel ministry stayed intact because prayer is the foundation.",
     pastorBio: "Pastor Esra RR Maralack was called by God at the age of 15. He completed his studies and graduated in 2016, entering full-time ministry that same year. On 24 December 2017, God placed him in Groenheuwel where he continues to pastor.",
-    // image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "holinessevangelism-nazarene", 
-    name: "Holiness Evangelism Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "holinessevangelism-nazarene",
+    name: "Holiness Evangelism Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Patrick Mckenzie",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1515165562835-c3b8c1d6fbb2?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "hopecity-nazarene", 
-    name: "Hope City Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "hopecity-nazarene",
+    name: "Hope City Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Yvonne Slinger",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "immanuel-nazarene", 
-    name: "Immanuel Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "immanuel-nazarene",
+    name: "Immanuel Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Cecil Kannemeyer",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1518733057094-95b53151d2f4?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "khayelitsha-nazarene", 
-    name: "Khayelitsha Church of the Nazarene", 
-    area: "Khayelitsha", 
+  {
+    id: "khayelitsha-nazarene",
+    name: "Khayelitsha Church of the Nazarene",
+    area: "Khayelitsha",
     pastor: "Marlene Karelse",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "leiden-nazarene", 
-    name: "Leiden Church of the Nazarene", 
-    area: "Delft", 
+  {
+    id: "leiden-nazarene",
+    name: "Leiden Church of the Nazarene",
+    area: "Delft",
     pastor: "John Samuels",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1529429611273-0a55f0e3a4df?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "manenberg-nazarene", 
-    name: "Manenberg Church of the Nazarene", 
-    area: "Manenberg", 
+  {
+    id: "manenberg-nazarene",
+    name: "Manenberg Church of the Nazarene",
+    area: "Manenberg",
     pastor: "Nathan Valensky",
-    time: "09:00 AM",
     address: "35C Tugela Road, Manenberg",
     youthService: "Friday at 19:00",
-    onlineService: false,
     outreach: "Open Air, bread drive",
     pastorBio: "Rev. Nathan Valensky is the senior pastor of Manenberg COTN. Prior to coming to Manenberg COTN in 2024, he served as senior pastor at Victory COTN for 7 years. He has a deep passion for the church and the preaching of God's word and loves seeing people come to know Jesus. Nathan is married to Thalia, who is also the worship leader. They have two children, Jordan and Jamie-Lee.",
-    // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "matroosfontein-nazarene", 
-    name: "Matroosfontein Church of the Nazarene", 
-    area: "Matroosfontein", 
+  {
+    id: "matroosfontein-nazarene",
+    name: "Matroosfontein Church of the Nazarene",
+    area: "Matroosfontein",
     pastor: "Wayne Davids",
-    time: "09:30 AM",
     address: "26 Civic Way, Matroosfontein",
-    youthService: "Friday evening at 19:00",
     sundaySchool: "Sunday at 08:30",
-    facebook: "Matroosfontein Church Of The Nazarene",
-    onlineService: false,
+    youthService: "Friday at 19:00",
+    facebook: "https://www.facebook.com/MatroosfonteinChurchOfTheNazarene",
     outreach: "Open air services, house visitations, soup kitchen, active youth ministry outreach, fitness class for 60+ on Tuesdays at 10:00",
     history: "A church on the move striving to reach the lost for Christ. The church celebrates 60 years in existence this year, to God be the Glory. (John 13:35)",
-    // image: "https://images.unsplash.com/photo-1529429611273-0a55f0e3a4df?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "mitchellsplain-nazarene", 
-    name: "Mitchells Plain Church of the Nazarene", 
-    area: "Mitchells Plain", 
+  {
+    id: "mitchellsplain-nazarene",
+    name: "Mitchells Plain Church of the Nazarene",
+    area: "Mitchells Plain",
     pastor: "Gene Pretorius",
-    time: "09:30 AM",
     address: "84 Silversands Street, Portlands, Mitchells Plain",
-    youthService: "Friday evenings at 19:30",
-    sundaySchool: "Sunday mornings at 08:45",
-    onlineService: false,
-    // image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=60&w=800"
+    sundaySchool: "Sunday at 08:45",
+    youthService: "Friday at 19:30",
   },
-  { 
-    id: "montagu-nazarene", 
-    name: "Montagu Church of the Nazarene", 
-    area: "Montagu", 
+  {
+    id: "montagu-nazarene",
+    name: "Montagu Church of the Nazarene",
+    area: "Montagu",
     pastor: "Melwyn Smith",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "neworleans-nazarene", 
-    name: "New Orleans Church of the Nazarene", 
-    area: "Mitchells Plain", 
+  {
+    id: "neworleans-nazarene",
+    name: "New Orleans Church of the Nazarene",
+    area: "Mitchells Plain",
     pastor: "Gail Arendse",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "northpine-nazarene", 
-    name: "Northpine Church of the Nazarene", 
-    area: "Brackenfell", 
+  {
+    id: "northpine-nazarene",
+    name: "Northpine Church of the Nazarene",
+    area: "Brackenfell",
     pastor: "Trevor Rich",
-    time: "09:30 AM",
     address: "21, 12th Ave, Belmont Park, 7570",
     sundaySchool: "Sunday at 09:30",
-    onlineService: false,
     outreach: "Campaign, outreach Bible studies in various homes, soup kitchen",
     history: "Northpine Church was started in 1992 by laypersons from Matroosfontein CotN under the leadership of Bro Cliffy September. Three pastors later — Rev. W. Snell, Rev. N. Kolkoto, and Rev. Trevor Rich — the church was finally able to buy and obtain property for a church building. Glory to God!",
     pastorBio: "Senior Pastor: Rev. Trevor Rich, ordained 2005 (in ministry as a pastor since 2001 at Brooklyn CotN). Associate Minister: Dr/Rev. Edna Rich, ordained 2008. Has 3 adult children and one adult granddaughter.",
-    // image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "overcome-nazarene", 
-    name: "Overcome Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "overcome-nazarene",
+    name: "Overcome Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Reginald Subjee",
-    time: "09:00 AM",
     address: "St Patrick Avenue",
-    youthService: "Friday at 17:00",
     sundaySchool: "Sunday at 09:00",
-    onlineService: false,
-    // image: "https://images.unsplash.com/photo-1515165562835-c3b8c1d6fbb2?auto=format&fit=crop&q=60&w=800"
+    youthService: "Friday at 17:00",
   },
-  { 
-    id: "paarl-nazarene", 
-    name: "Paarl Church of the Nazarene", 
-    area: "Paarl", 
+  {
+    id: "paarl-nazarene",
+    name: "Paarl Church of the Nazarene",
+    area: "Paarl",
     pastor: "Vincent Jonkers",
-    time: "10:00 AM",
     address: "Cnr Pittesporum & Evans Street, Klein Nederberg, Paarl",
     pastorImage: require('../assets/PaarlResources/PaarlPastor.jpeg'),
-    // image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "parkwood-nazarene", 
-    name: "Parkwood Church of the Nazarene", 
-    area: "Parkwood", 
+  {
+    id: "parkwood-nazarene",
+    name: "Parkwood Church of the Nazarene",
+    area: "Parkwood",
     pastor: "Marthinus Martin",
-    time: "10:00 AM",
     address: "78 Acacia Street, Parkwood, 7800",
-    // image: "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "restoration-nazarene", 
-    name: "Restoration Church of the Nazarene", 
-    area: "Heideveld", 
+  {
+    id: "restoration-nazarene",
+    name: "Restoration Church of the Nazarene",
+    area: "Heideveld",
     pastor: "Daniel Carelse",
-    time: "09:30 AM",
     address: "44 Hex Crescent, Manenberg, 7767",
-    youthService: "Fridays at 18:00",
     sundaySchool: "Sunday at 09:00",
+    youthService: "Fridays at 18:00",
     facebook: "https://www.facebook.com/share/179wSCQWHT/?mibextid=wwXIfr",
-    onlineService: false,
     outreach: "Open airs, prayer walks, cottage meetings, soup kitchen",
     pastorBio: "Pastor Daniel Carelse is the lead pastor of Heideveld Church of the Nazarene. Over four years in ministry, he has become known for steady leadership, compassionate spirit, and dedication to spiritual growth. In January 2025, he graduated from the Nazarene Theological College (NTC). His ministry is rooted in teaching and evangelism, with a vision to see restoration in individuals, families, and communities through the power of the Gospel.",
-    image: require('../assets/Restoration COTN.jpeg')
+    image: require('../assets/Restoration COTN.jpeg'),
   },
-  { 
-    id: "ruach-nazarene", 
-    name: "Ruach Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "ruach-nazarene",
+    name: "Ruach Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Jessica Swartz",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "sirlowryspass-nazarene", 
-    name: "Sir Lowry's Pass Church of the Nazarene", 
-    area: "Somerset West", 
+  {
+    id: "sirlowryspass-nazarene",
+    name: "Sir Lowry's Pass Church of the Nazarene",
+    area: "Somerset West",
     pastor: "Peter Louw",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1518733057094-95b53151d2f4?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "steenberg-nazarene", 
-    name: "Steenberg Church of the Nazarene", 
-    area: "Steenberg", 
+  {
+    id: "steenberg-nazarene",
+    name: "Steenberg Church of the Nazarene",
+    area: "Steenberg",
     pastor: "Quinton Williams",
-    time: "10:00 AM",
     pastorImage: require('../assets/SteenbergResources/SteenbergPastor.jpeg'),
-    // image: "https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "strandfontein-nazarene", 
-    name: "Strandfontein Church of the Nazarene", 
-    area: "Strandfontein", 
+  {
+    id: "strandfontein-nazarene",
+    name: "Strandfontein Church of the Nazarene",
+    area: "Strandfontein",
     pastor: "Reginald Subjee",
-    time: "09:00 AM",
     address: "Cnr Reygersdal & Watussi Drive, Bay View, Cape Town, 7788",
-    // image: "https://images.unsplash.com/photo-1529429611273-0a55f0e3a4df?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "sunnyside-nazarene", 
-    name: "Sunnyside Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "sunnyside-nazarene",
+    name: "Sunnyside Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Rodger Chetty",
-    time: "09:30 AM",
     address: "C/O Benbow and Bresee Avenue, Sunnyside, Athlone, 7764",
-    // image: "https://images.unsplash.com/photo-1505842465776-3d90f616310d?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "victory-nazarene", 
-    name: "Victory Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "victory-nazarene",
+    name: "Victory Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Liam Amansure",
-    time: "09:00 AM",
     address: "127 Angela Street, Valhalla Park",
-    image: require('../assets/Victory COTN.jpeg')
+    image: require('../assets/Victory COTN.jpeg'),
   },
-  { 
-    id: "wesbank-nazarene", 
-    name: "Wesbank Church of the Nazarene", 
-    area: "Cape Town", 
+  {
+    id: "wesbank-nazarene",
+    name: "Wesbank Church of the Nazarene",
+    area: "Cape Town",
     pastor: "Michael Cupido",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=60&w=800"
   },
-  { 
-    id: "wellington-nazarene", 
-    name: "Wellington Church of the Nazarene", 
-    area: "Wellington", 
+  {
+    id: "wellington-nazarene",
+    name: "Wellington Church of the Nazarene",
+    area: "Wellington",
     pastor: "Freddie Green",
-    time: "10:00 AM",
-    // image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=60&w=800"
-  }
+  },
 ];
