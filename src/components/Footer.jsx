@@ -63,10 +63,10 @@ export default function Footer() {
           </div>
 
           {/* Spacer */}
-          <div className="hidden md:block md:col-span-1" />
+          <div className="hidden md:block md:col-span-4" />
 
           {/* Navigation Column */}
-          <div className="md:col-span-3 space-y-4">
+          {/* <div className="md:col-span-3 space-y-4">
             <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-atlantic">Navigate</h4>
             <ul className="space-y-3">
               {[
@@ -85,7 +85,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Column */}
           <div className="md:col-span-4 space-y-4">

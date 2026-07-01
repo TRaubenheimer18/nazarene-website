@@ -1,5 +1,5 @@
 import { EVENTS, DEPT_COLORS } from '../data/events';
-import EventsImage from '../assets/EventsImage.jpeg';
+import EventsImage from '../assets/event.jpg';
 import NYILogo from '../assets/NYI-logo.jpeg';
 import NazareneLogo from '../assets/Nazarene-logo.jpeg';
 import NMILogo from '../assets/NMI-logo.jpeg';
@@ -43,6 +43,7 @@ export default function Events() {
       {/* Hero */}
       <div className="relative overflow-hidden">
         <img src={EventsImage} alt="Events" className="w-full h-[50vh] object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-blue via-navy-blue/60 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/75 via-black/40 to-transparent flex items-end pb-8 px-6">
           <div className="max-w-6xl mx-auto w-full">
             <span
