@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     setChurchCount(0);
     const target = 40;
-    const duration = 2000;
+    const duration = 5000;
     const step = Math.ceil(duration / target);
     let current = 0;
     const timer = setInterval(() => {
@@ -74,15 +74,21 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-6 -mt-12 relative z-20">
         <div className="bg-white rounded-3xl shadow-2xl shadow-navy/10 border border-slate-100 p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { label: 'Churches', val: churchCount, color: 'text-atlantic' },
+            { label: 'Churches', val: churchCount, color: 'text-atlantic', animate: true },
             { label: 'District', val: '1', color: 'text-crimson' },
             { label: 'Members', val: '5k+', color: 'text-fynbos' },
             { label: 'Commitment', val: '100%', color: 'text-crimson' }
           ].map((stat, i) => (
             <div key={i} className="text-center group">
-              <p className={`text-4xl font-black ${stat.color} mb-1 group-hover:scale-110 transition-transform`}>
-                {stat.val}
-              </p>
+              <div className="h-12 overflow-hidden flex items-center justify-center mb-1">
+                <p
+                  key={stat.animate ? stat.val : undefined}
+                  className={`text-4xl font-black ${stat.color} group-hover:scale-110 transition-transform ${stat.animate ? 'animate-count-up' : ''}`}
+                  style={stat.animate ? { animation: 'countUp 0.10s ease-out' } : {}}
+                >
+                  {stat.val}
+                </p>
+              </div>
               <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">
                 {stat.label}
               </p>

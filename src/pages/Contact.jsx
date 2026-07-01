@@ -34,15 +34,15 @@ export default function Contact() {
 
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="h-[2px] w-10 bg-atlantic"></div>
-                <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">District Office</span>
+                <div className="h-[2px] w-10 bg-crimson"></div>
+                <span className="text-[10px] font-black text-light-blue uppercase tracking-[0.4em]">District Office</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-navy-blue tracking-tighter leading-tight mb-8">
                 Headquarters.
               </h2>
             </div>
 
-            <div className="bg-[#FCFAF5] rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm space-y-6">
+            <div className="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm space-y-6">
               {[
                 { icon: '📍', label: 'Address', value: 'P.O Box 42624, Lotus River, Cape Town, 7854' },
                 { icon: '📞', label: 'Phone', value: '+27 (21) 000 0000' },
@@ -50,7 +50,7 @@ export default function Contact() {
                 { icon: '🕐', label: 'Office Hours', value: 'Mon – Fri: 08:30 – 16:30' },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-5">
-                  <div className="w-10 h-10 rounded-xl bg-sand/50 flex items-center justify-center text-lg shrink-0">{item.icon}</div>
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-lg shrink-0">{item.icon}</div>
                   <div>
                     <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">{item.label}</p>
                     <p className="text-sm text-navy/80 font-light leading-snug">{item.value}</p>
@@ -59,8 +59,8 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="relative bg-navy rounded-[2rem] p-8 overflow-hidden">
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-atlantic rounded-l-[2rem]"></div>
+            <div className="relative bg-navy rounded-[2rem] p-6 md:p-6 border border-slate-100 shadow-sm space-y-1 overflow-hidden">
+              <div className="absolute top-0 left-0 w-2 h-full bg-atlantic rounded-1-[2rem]"></div>
               <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em] mb-3">Our Commitment</p>
               <p className="text-black font-light text-sm leading-relaxed">
                 We aim to respond to all inquiries within 2 business days. For urgent pastoral matters, please call the district office directly.
@@ -74,18 +74,18 @@ export default function Contact() {
             <div className="bg-white p-7 md:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 shadow-sm">
 
               <div className="flex items-center gap-4 mb-10">
-                <div className="h-[2px] w-10 bg-atlantic"></div>
-                <span className="text-[10px] font-black text-atlantic uppercase tracking-[0.4em]">Send a Message</span>
+                <div className="h-[2px] w-10 bg-crimson"></div>
+                <span className="text-[10px] font-black text-light-blue uppercase tracking-[0.4em]">Send a Message</span>
               </div>
 
               <form className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div className="relative">
-                    <input type="text" id="name" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent" placeholder="Name" />
+                    <input type="text" id="name" className="peer w-full bg-transparent border-b-2 border-slate-100 py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent" placeholder="Name" />
                     <label htmlFor="name" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-atlantic transition-all">Full Name</label>
                   </div>
                   <div className="relative">
-                    <input type="email" id="email" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent" placeholder="Email" />
+                    <input type="email" id="email" className="peer w-full bg-transparent border-b-2 border-slate-100 py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent" placeholder="Email" />
                     <label htmlFor="email" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-atlantic transition-all">Email Address</label>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Contact() {
                 <div>
                   <label className="block text-[10px] font-black uppercase tracking-widest text-atlantic mb-3">Subject</label>
                   <div className="relative">
-                    <select className="w-full appearance-none bg-[#FCFAF5] border border-sand rounded-xl px-4 py-3 text-sm text-navy font-medium focus:outline-none focus:border-atlantic focus:ring-1 focus:ring-atlantic/30 transition-all cursor-pointer">
+                    <select className="w-full appearance-none bg-white border border-slate-100 rounded-xl px-4 py-3 text-sm text-navy font-medium focus:outline-none focus:border-atlantic focus:ring-1 focus:ring-atlantic/30 transition-all cursor-pointer">
                       <option value="" disabled>Select a subject...</option>
                       <option>General Inquiry</option>
                       <option>Find a Church</option>
@@ -105,13 +105,13 @@ export default function Contact() {
                 </div>
 
                 <div className="relative">
-                  <textarea rows="4" id="msg" className="peer w-full bg-transparent border-b-2 border-sand py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent resize-none" placeholder="Message"></textarea>
+                  <textarea rows="4" id="msg" className="peer w-full bg-transparent border-b-2 border-slate-100 py-3 focus:border-atlantic outline-none transition-colors placeholder-transparent resize-none" placeholder="Message"></textarea>
                   <label htmlFor="msg" className="absolute left-0 -top-4 text-[10px] font-black uppercase tracking-widest text-fynbos/50 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-atlantic transition-all">How can we help?</label>
                 </div>
 
                 <button type="submit" className="group relative w-full overflow-hidden bg-navy py-5 rounded-2xl">
                   <div className="absolute inset-0 bg-atlantic translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                  <span className="relative z-10 text-sand font-black uppercase tracking-[0.3em] text-xs group-hover:text-white transition-colors">
+                  <span className="relative z-10 text-atlantic font-black uppercase tracking-[0.3em] text-xs group-hover:text-white transition-colors">
                     Send Message
                   </span>
                 </button>
