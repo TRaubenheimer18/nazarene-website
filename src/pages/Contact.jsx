@@ -5,8 +5,8 @@ export default function Contact() {
     <div className="min-h-screen selection:bg-atlantic/30">
 
       {/* 1. Hero */}
-      <section className="relative bg-navy py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+      <section className="relative bg-white py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
+
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-3 mb-8 bg-white/5 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
@@ -45,8 +45,8 @@ export default function Contact() {
             <div className="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm space-y-6">
               {[
                 { icon: '📍', label: 'Address', value: 'P.O Box 42624, Lotus River, Cape Town, 7854' },
-                { icon: '📞', label: 'Phone', value: '+27 (21) 000 0000' },
-                { icon: '✉️', label: 'Email', value: 'info@wcnazarene.org' },
+                // { icon: '📞', label: 'Phone', value: '+27 (21) 000 0000' },
+                { icon: '✉️', label: 'Email', value: 'Secretary@nazarenecapetown.com' },
                 { icon: '🕐', label: 'Office Hours', value: 'Mon – Fri: 08:30 – 16:30' },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-5">

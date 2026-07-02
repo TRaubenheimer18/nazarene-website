@@ -14,9 +14,9 @@ export default function Churches() {
     <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
       
       {/* 1. Header Section - Using the deep Atlantic Mesh style */}
-      <div className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
+      <div className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden bg-white">
         {/* Subtle background glow to match Home/About */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+
         
         <div className="relative z-10">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter">

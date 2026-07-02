@@ -60,11 +60,26 @@ export default function ChurchProfile() {
           : <div className="w-full h-full bg-atlantic/80" />
         }
         <div className="absolute inset-0 bg-gradient-to-t from-navy-blue via-navy-blue/60 to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto flex items-end justify-between">
-          <div>
-            <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">{church.area}</span>
-            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">{church.name}</h1>
-          </div>
+        <div className="absolute bottom-8 left-8 right-8 max-w-5xl mx-auto">
+          <span className="text-[10px] font-black text-sand/70 uppercase tracking-[0.3em]">{church.area}</span>
+          <h1 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-1">{church.name}</h1>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-6 py-12 space-y-0">
+
+        {/* Quick info + Social */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
+          {serviceItems.length > 0 && (
+            <div className={`grid ${{ 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3' }[serviceItems.length]} border border-slate-200 rounded-xl overflow-hidden flex-1`}>
+              {serviceItems.map((item, i) => (
+                <div key={i} className={`px-6 py-5 ${i !== 0 ? 'border-l border-slate-200' : ''}`}>
+                  <p className="text-[10px] font-black text-crimson uppercase tracking-[0.3em] mb-1">{item.label}</p>
+                  <p className="text-navy-blue font-semibold text-sm">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          )}
           {(church.facebook || church.tiktok) && (
             <div className="flex gap-2 shrink-0">
               {church.facebook && (
@@ -84,21 +99,6 @@ export default function ChurchProfile() {
             </div>
           )}
         </div>
-      </div>
-
-      <div className="max-w-5xl mx-auto px-6 py-12 space-y-0">
-
-        {/* Quick info */}
-        {serviceItems.length > 0 && (
-          <div className={`grid grid-cols-${serviceItems.length} border border-slate-200 rounded-xl overflow-hidden mb-12`}>
-            {serviceItems.map((item, i) => (
-              <div key={i} className={`px-6 py-5 ${i !== 0 ? 'border-l border-slate-200' : ''}`}>
-                <p className="text-[10px] font-black text-crimson uppercase tracking-[0.3em] mb-1">{item.label}</p>
-                <p className="text-navy-blue font-semibold text-sm">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* Current Pastor */}
         {(church.pastor || church.pastorImage) && (
@@ -109,7 +109,7 @@ export default function ChurchProfile() {
             </div>
             <div className="flex flex-col sm:flex-row items-start gap-6">
               {church.pastorImage && (
-                <img src={church.pastorImage} alt={church.pastor} className="w-32 h-32 rounded-full object-cover shrink-0" />
+                <img src={church.pastorImage} alt={church.pastor} className="w-32 h-32 rounded-full object-cover object-top shrink-0" />
               )}
               <div>
                 <p className="text-[10px] font-black text-atlantic uppercase tracking-[0.3em] mb-1">Senior Pastor</p>

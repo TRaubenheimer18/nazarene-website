@@ -9,8 +9,8 @@ export default function Ministries() {
     <div className="bg-sand/60/10 min-h-screen selection:bg-atlantic/30">
 
       {/* Hero */}
-      <section className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-atlantic rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+      <section className="relative py-20 md:py-28 px-4 md:px-6 text-center overflow-hidden bg-white">
+
         <div className="relative z-10 max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
             <span className="text-atlantic">Our </span>

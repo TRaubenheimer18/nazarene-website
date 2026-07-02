@@ -440,37 +440,9 @@ export const churches = [
     id: "victory-nazarene",
     name: "Victory Church of the Nazarene",
     area: "Cape Town",
-    pastor: "Rev. Liam Amansure",
+    pastor: "Liam Amansure",
     address: "127 Angela Street, Valhalla Park",
     image: require('../assets/Victory COTN.jpeg'),
-    pastorImage: require('../assets/VictoryResources/VictoryPastor.jpeg'),
-    pastorBio: "Rev. Liam Amansure currently serves as Lead Pastor of Victory Church of the Nazarene alongside his wife Sister Whitney and their daughters Makenzie and Keziah.",
-    historyPeriods: [
-      {
-        period: '2006',
-        title: 'Establishment',
-        content: [
-          'Victory Church of the Nazarene was established in 2006 by Pastor Martin, who at the time was serving as the pastor of Bonteheuwel Church of the Nazarene. Due to a large number of congregants living in Valhalla Park, many found it difficult and often unsafe to travel to Bonteheuwel for Sunday services.',
-          'In response to this need, Pastor Martin initiated an outreach in Valhalla Park, beginning with a small splinter group and earlier Sunday services. These early gatherings were first held in the home of Sis Eunice Nitsky at 92 Simon Street, Valhalla Park.',
-        ],
-      },
-      {
-        period: 'Early Growth',
-        title: 'Transition & Relocation',
-        content: [
-          'As the congregation grew, leadership transitioned to Pastor Chetty, under whose guidance services were moved to Nooitgedacht. When the hosts of that venue relocated, services were then held in a classroom at Valpark Primary School, secured by Pastor Chetty.',
-          'Following Pastor Chetty\'s departure, Pastor Levi assumed leadership of Victory Church of the Nazarene. During this season, due to repeated break-ins at the school, the church board sought an alternative meeting place. Brother William and Sister Jacqueline Cornelius opened their home at 127 Angela Street, Valhalla Park, where the congregation continued to gather in worship.',
-        ],
-      },
-      {
-        period: '2018–2024',
-        title: 'New Seasons of Leadership',
-        content: [
-          'Pastor Levi faithfully shepherded the church until his passing in 2018. After his passing, Pastor Nathan Valensky and his family joined the church as the pastoral family, serving from 2018 to 2024.',
-          'Following his ministry, God graciously provided new leadership through Pastor Liam Amansure and his family — his wife Sister Whitney and their daughters Makenzie and Keziah — who currently serve and continue to lead Victory Church of the Nazarene.',
-        ],
-      },
-    ],
   },
   {
     id: "wesbank-nazarene",

@@ -95,18 +95,13 @@ export default function Footer() {
                 <span className="mt-0.5 text-slate-300">📍</span>
                 <span>P.O Box 42624, Lotus River, Cape Town, 7854</span>
               </li>
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <span className="text-slate-300">📞</span>
                 <span>+27 (21) 000 0000</span>
-              </li>
+              </li> */}
               <li className="flex items-center gap-3">
                 <span className="text-slate-300">✉️</span>
-                <a
-                  href="mailto:info@wcnazarene.org"
-                  className="hover:text-atlantic transition-colors underline decoration-slate-200 underline-offset-4"
-                >
-                  info@wcnazarene.org
-                </a>
+                <span className="pointer-events-none cursor-default">Secretary@nazarenecapetown.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-slate-300">🕐</span>
